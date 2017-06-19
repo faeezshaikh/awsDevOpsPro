@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.cloudpros.awssolarchpro" version="0.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>AWS-ArchPro</name>
-  <description>AWS Certified Solution Architect Professional </description>
+<widget id="com.cloudpros.awsdevopspro" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>AWS-DevOpsPro</name>
+  <description>AWS Certified DevOps Professional </description>
   <author email="cloudpros1@gmail.com" href="https://www.facebook.com/awsarchitect">Cloud Pros1</author>
   <content src="index.html"/>
   <access origin="*"/>

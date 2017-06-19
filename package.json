@@ -1,5 +1,5 @@
 {
-  "name": "awsSolArchPro",
+  "name": "awsDevOpsPro",
   "author": "Cloud Pros",
   "homepage": "https://www.facebook.com/awsarchitect",
   "private": true,
@@ -52,5 +52,5 @@
       "locator": "ios"
     }
   ],
-  "description": "awsSolArchPro: An AWS Quiz Project"
+  "description": "AwsDevOpsPro: An AWS Quiz Project"
 }
