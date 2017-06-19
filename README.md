@@ -14,6 +14,9 @@ For Signing certs error (Udemy vid) &
 https://stackoverflow.com/questions/37806538/code-signing-is-required-for-product-type-application-in-sdk-ios-10-0-stic#answer-39498874
 
 
+SimpleTimer
+==========
+npm install ng2-simple-timer
 
 Troubleshooting:
 ===============
