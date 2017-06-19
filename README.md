@@ -1,4 +1,4 @@
-# awsSolArchPro
+# AWSDevOpsPro
 
 
 sudo ionic build android --prod --release
