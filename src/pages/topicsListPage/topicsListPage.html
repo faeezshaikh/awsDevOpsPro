@@ -29,7 +29,7 @@
       <!--<ion-item-sliding *ngFor="let topic of topics">
         <ion-item (click)="itemTapped($event, topic)" detail-push>-->
 
-        <ion-item  *ngFor="let topic of topics | slice:0:8; let i = index;" (click)="itemTapped($event, topic)" detail-push>
+        <ion-item text-wrap *ngFor="let topic of topics | slice:0:8; let i = index;" (click)="itemTapped($event, topic)" detail-push>
           
           <ion-thumbnail item-left>
             <img src="{{topic.icon}}">
