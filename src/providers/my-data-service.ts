@@ -20,7 +20,7 @@ export class MyDataService {
     this.topicMap.set(1, 'assets/data/ha&elasticity.js');
     this.topicMap.set(2, 'assets/data/cd&pa.js');
     this.topicMap.set(3, 'assets/data/mm&l.js');
-    this.topicMap.set(4, 'assets/data/networkDesign.js');
+    this.topicMap.set(4, 'assets/data/security&governance.js');
     this.topicMap.set(5, 'assets/data/dataStorage.js');
     this.topicMap.set(6, 'assets/data/security.js');
     this.topicMap.set(7, 'assets/data/scalability.js');

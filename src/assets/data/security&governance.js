@@ -1,6 +1,6 @@
 {
     "quiz": {
-        "name": "Network Design",
+        "name": "Security, Governance, & Validation",
         "logo" : "assets/img/SQS.png",
         "time":"20 minutes"
     },
