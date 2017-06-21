@@ -18,7 +18,7 @@ export class MyDataService {
     // console.log('Hello DataService Provider');
     this.topicMap = new Map<number, string>();
     this.topicMap.set(1, 'assets/data/ha&elasticity.js');
-    this.topicMap.set(2, 'assets/data/costing.js');
+    this.topicMap.set(2, 'assets/data/cd&pa.js');
     this.topicMap.set(3, 'assets/data/deploymentMgmt.js');
     this.topicMap.set(4, 'assets/data/networkDesign.js');
     this.topicMap.set(5, 'assets/data/dataStorage.js');
