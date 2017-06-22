@@ -21,10 +21,10 @@ export class MyDataService {
     this.topicMap.set(2, 'assets/data/cd&pa.js');
     this.topicMap.set(3, 'assets/data/mm&l.js');
     this.topicMap.set(4, 'assets/data/security&governance.js');
-    this.topicMap.set(5, 'assets/data/dataStorage.js');
-    this.topicMap.set(6, 'assets/data/security.js');
-    this.topicMap.set(7, 'assets/data/scalability.js');
-    this.topicMap.set(8, 'assets/data/cloudMigration.js');
+    // this.topicMap.set(5, 'assets/data/dataStorage.js');
+    // this.topicMap.set(6, 'assets/data/security.js');
+    // this.topicMap.set(7, 'assets/data/scalability.js');
+    // this.topicMap.set(8, 'assets/data/cloudMigration.js');
 
     this.topicMap.set(9, 'assets/data/exam1.js');
     this.topicMap.set(10, 'assets/data/exam2.js');
