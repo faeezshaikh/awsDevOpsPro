@@ -142,14 +142,15 @@
     } 
      ,
        {
-        "Id": 2,
-        "Name": "", 
-        "Tag":"Security",
+        "Id": 11,
+        "Name": "Your application uses CloudFormation to orchestrate your application's resources. During your testing phase before the application went live, your Amazon RDS instance type was changed and caused the instance to be re-created, resulting In the loss of test data. How should you prevent this from occurring in the future?", 
+        "Tag":"CD",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": true },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            { "Id": 1055, "QuestionId": 1010, "Name": "Within the AWS CloudFormation parameter with which users can select the Amazon RDS instance type, set AllowedValues to only contain the current instance type.", "IsAnswer": false},
+            { "Id": 1056, "QuestionId": 1010, "Name": "Use an AWS CloudFormation stack policy to deny updates to the instance. Only allow UpdateStack permission to IAM principals that are denied SetStackPolicy.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "In the AWS CloudFormation template, set the AWS::RDS::DBInstance's DBlnstanceClass property to be read-only.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Subscribe to the AWS CloudFormation notification 'BeforeResourceUpdate' and call CancelStackUpdate if the resource identified is the Amazon RDS instance.", "IsAnswer": false },
+            { "Id": 1059, "QuestionId": 1010, "Name": "In the AWS CloudFormation template, set the DeletionPolicy of the AWS::RDS::DBInstance's DeletionPolicy property to 'Retain'", "IsAnswer": true }],
             "Explanation":"",
             "Ref":""
     } 
