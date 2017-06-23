@@ -235,14 +235,16 @@
     } 
      ,
        {
-        "Id": 2,
-        "Name": "", 
-        "Tag":"Security",
+        "Id": 18,
+        "Name": "You use Amazon CloudWatch as your primary monitoring system for your web application. After a recent software deployment, your users are getting Intermittent 500 Internal Server Errors when using the web application. You want to create a CloudWatch alarm, and notify an on-call engineer when these occur. How can you accomplish this using AWS services? Choose 3 answers", 
+        "Tag":"MM&L",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": true },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            { "Id": 1055, "QuestionId": 1010, "Name": "Deploy your web application as an AWS Elastic Beanstalk application. Use the default Elastic Beanstalk Cloudwatch metrics to capture 500 Internal Server Errors. Set a CloudWatch alarm on that metric.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Install a CloudWatch Logs Agent on your servers to stream web application logs to CloudWatch.", "IsAnswer": true },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Use Amazon Simple Email Service to notify an on-call engineer when a CloudWatch alarm is triggered.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Create a CloudWatch Logs group and define metric filters that capture 500 Internal Server Errors. Set a CloudWatch alarm on that metric.", "IsAnswer": true },
+            { "Id": 1059, "QuestionId": 1010, "Name": "Use Amazon Simple Notification Service to notify an on-call engineer when a CloudWatch alarm is triggered.", "IsAnswer": true },
+            { "Id": 1060, "QuestionId": 1010, "Name": "Use AWS Data Pipeline to stream web application logs from your servers to CloudWatch.", "IsAnswer": false }],
             "Explanation":"",
             "Ref":""
     } 
