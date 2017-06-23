@@ -263,14 +263,14 @@
     } 
      ,
        {
-        "Id": 2,
-        "Name": "", 
-        "Tag":"Security",
+        "Id": 20,
+        "Name": "You have a complex system that involves networking, IAM policies, and multiple, three-tier applications. You are still receiving requirements for the new system, so you don't yet know how many AWS components will be present in the final design. You want to start using AWS CloudFormation to define these AWS resources so that you can automate and version-control your infrastructure. How would you use AWS CloudFormation to provide agile new environments for your customers in a cost-effective, reliable manner?", 
+        "Tag":"CD, HA",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": true },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            { "Id": 1055, "QuestionId": 1010, "Name": "Manually create one template to encompass all the resources that you need for the system, so you only have a single template to version-control.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Create multiple separate templates for each logical part of the system, create nested stacks in AWS CloudFormation, and maintain several templates in version-control.", "IsAnswer": true },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Create multiple separate templates for each logical part of the system, and provide the outputs from one to the next using an Amazon Elastic Compute Cloud (EC2) instance running the SDK for finer granularity of control.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Manually construct the networking layer using Amazon Virtual Private Cloud (VPC) because this does not change often, and then use AWS CloudFormation to define all other ephemeral resources.", "IsAnswer": false }],
             "Explanation":"",
             "Ref":""
     } 
