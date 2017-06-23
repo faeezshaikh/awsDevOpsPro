@@ -250,14 +250,14 @@
     } 
      ,
        {
-        "Id": 2,
-        "Name": "", 
-        "Tag":"Security",
+        "Id": 19,
+        "Name": "After a daily scrum with your development teams, you've agreed that using Blue/Green style deployments would benefit the team. Which technique should you use to deliver this new requirement?", 
+        "Tag":"CD",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": true },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            { "Id": 1055, "QuestionId": 1010, "Name": "Re-deploy your application on AWS Elastic Beanstalk, and take advantage of Elastic Beanstalk deployment types.", "IsAnswer": true},
+            { "Id": 1056, "QuestionId": 1010, "Name": "Using an AWS CloudFormation template, re-deploy your application behind a load balancer, launch a new AWS CloudFormation stack during each deployment, update your load balancer to send half your traffic to the new stack while you test, after verification update the load balancer to send 100% of traffic to the new stack, and then terminate the old stack.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Re-deploy your application behind a load balancer that uses Auto Scaling groups, create a new identical Auto Scaling group, and associate it to the load balancer. During deployment, set the desired number of instances on the old Auto Scaling group to zero, and when all instances have terminated, delete the old Auto Scaling group.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Using an AWS OpsWorks stack, re-deploy your application behind an Elastic Load Balancing load balancer and take advantage of OpsWorks stack versioning, during deployment create a new version of your application, tell OpsWorks to launch the new version behind your load balancer, and when the new version is launched, terminate the old OpsWorks stack.", "IsAnswer": false }],
             "Explanation":"",
             "Ref":""
     } 
