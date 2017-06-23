@@ -274,6 +274,137 @@
             "Explanation":"",
             "Ref":""
     } 
+     ,
+       {
+        "Id": 21,
+        "Name": "Your development team wants account-level access to production instances in order to do live debugging of a highly secure environment. Which of the following should you do?", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Place the credentials provided by Amazon Elastic Compute Cloud (EC2) into a secure Amazon Sample Storage Service (S3) bucket with encryption enabled. Assign AWS Identity and Access Management (IAM) users to each developer so they can download the credentials file.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Place an internally created private key into a secure S3 bucket with server-side encryption using customer keys and configuration management, create a service account on all the instances using this private key, and assign IAM users to each developer so they can download the file.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Place each developer's own public key into a private S3 bucket, use instance profiles and configuration management to create a user account for each developer on all instances, and place the user's public keys into the appropriate account.", "IsAnswer": true },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Place the credentials provided by Amazon EC2 onto an MFA encrypted USB drive, and physically share it with each developer so that the private key never leaves the office.", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+    
+     ,
+       {
+        "Id": 22,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+     ,
+       {
+        "Id": 23,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+     ,
+       {
+        "Id": 24,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+     ,
+       {
+        "Id": 25,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+     ,
+       {
+        "Id": 26,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+     ,
+       {
+        "Id": 21,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+     ,
+       {
+        "Id": 21,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+     ,
+       {
+        "Id": 21,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+     ,
+       {
+        "Id": 21,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
     
    
      ]
