@@ -313,8 +313,7 @@
             { "Id": 1057, "QuestionId": 1010, "Name": "Using Amazon SNS, create a notification on any new Amazon S3 objects that automatically updates a new DynamoDB table to store all metadata about the new object. Subscribe the application to the Amazon SNS topic to update its internal Amazon S3 object metadata cache from the DynamoDB table.", "IsAnswer": true},
             { "Id": 1058, "QuestionId": 1010, "Name": "Upload all images to Amazon SQS, set up SQS lifecycles to move all images to Amazon S3, and initiate an Amazon SNS notification to your application to update the application's Internal Amazon S3 object metadata cache.", "IsAnswer": false },
             { "Id": 1059, "QuestionId": 1010, "Name": "Upload all images to an ElastiCache filecache server. Update your application to now read all file metadata from the ElastiCache filecache server, and configure the ElastiCache policies to push all files to Amazon S3 for long-term storage.", "IsAnswer": false }],
-            "Explanation":"",
-            "Ref":""
+            "Explanation":"Creating Lifecycle policies doesn't make sense here. Using ElastiCache to store metadata is not a good practice. SQS Lifecycles does not exist. Subsribing to SNS to update internal cache is the best option in this scenario."
     } 
      ,
        {
