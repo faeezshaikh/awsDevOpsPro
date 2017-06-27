@@ -318,15 +318,15 @@
      ,
        {
         "Id": 24,
-        "Name": "", 
+        "Name": "Your current log analysis application takes more than four hours to generate a report of the top 10 users of your web application. You have been asked to implement a system that can report this information in real time, ensure that the report is always up to date, and handle increases in the number of requests to your web application. Choose the option that is cost-effective and can fulfill the requirements.", 
         "Tag":"",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation":"",
-            "Ref":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "Publish your data to CloudWatch Logs, and configure your application to autoscale to handle the load on demand.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Publish your log data to an Amazon S3 bucket. Use AWS CloudFormation to create an Auto Scaling group to scale your post-processing application which is configured to pull down your log files stored an Amazon S3.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Post your log data to an Amazon Kinesis data stream, and subscribe your log-processing application so that is configured to process your logging data.", "IsAnswer": true },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Configure an Auto Scaling group to increase the size of your Amazon EMR duster.", "IsAnswer": false },
+            { "Id": 1059, "QuestionId": 1010, "Name": "Create a multi-AZ Amazon RDS MySQL cluster, post the logging data to MySQL, and run a map reduce job to retrieve the required information on user counts.", "IsAnswer": false }],
+            "Explanation":"Only Kinesis can satisfy the 'real-time' processing requirement in this case"
     } 
      ,
        {
