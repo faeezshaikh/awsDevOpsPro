@@ -392,7 +392,292 @@
     } 
      ,
        {
-        "Id": 21,
+        "Id": 30,
+        "Name": "The operations team and the development team want a single place to view both operating system and application logs. How should you implement this using AWS services? Choose 2 answers", 
+        "Tag":"mm&l",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "Using AWS CloudFormation, create a CloudWatch Logs LogGroup and send the operating system and application logs of interest using the CloudWatch Logs Agent.", "IsAnswer": true},
+            { "Id": 1056, "QuestionId": 1010, "Name": "Using AWS CloudFormation and configuration management, set up remote logging to send events via UDP packets to CloudTrail.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Using configuration management, set up remote logging to send events to Amazon Kinesis and insert these into Amazon CloudSearch or Amazon Redshift, depending on available analytic tools.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Using AWS CloudFormation, create a CloudWatch Logs LogGroup. Because the Cloudwatch Log agent automatically sends all operating system logs, you only have to configure the application logs for sending off-machine.", "IsAnswer": true},
+            { "Id": 1059, "QuestionId": 1010, "Name": "Using AWS CloudFormation, merge the application logs with the operating system logs, and use IAM Roles to allow both teams to have access to view console output from Amazon EC2.", "IsAnswer": false }]
+    } 
+      ,
+       {
+        "Id": 30,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+      ,
+       {
+        "Id": 30,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+      ,
+       {
+        "Id": 30,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+      ,
+       {
+        "Id": 30,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+      ,
+       {
+        "Id": 30,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+      ,
+       {
+        "Id": 30,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+      ,
+       {
+        "Id": 30,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+      ,
+       {
+        "Id": 30,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+      ,
+       {
+        "Id": 30,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+      ,
+       {
+        "Id": 30,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+      ,
+       {
+        "Id": 30,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+      ,
+       {
+        "Id": 30,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+      ,
+       {
+        "Id": 30,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+      ,
+       {
+        "Id": 30,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+      ,
+       {
+        "Id": 30,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+      ,
+       {
+        "Id": 30,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+      ,
+       {
+        "Id": 30,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+      ,
+       {
+        "Id": 30,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+      ,
+       {
+        "Id": 30,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+      ,
+       {
+        "Id": 30,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+      ,
+       {
+        "Id": 30,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation":"",
+            "Ref":""
+    } 
+      ,
+       {
+        "Id": 30,
         "Name": "", 
         "Tag":"",
         "Options": [
