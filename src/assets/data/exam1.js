@@ -331,15 +331,13 @@
      ,
        {
         "Id": 25,
-        "Name": "", 
+        "Name": "You are using Elastic Beanstalk to manage your e-commerce store. The store is based on an open source e- commerce platform and is deployed across multiple instances in an Auto Scaling group. Your development team often creates new 'extensions' for the e-commerce store. These extensions include PHP source code as well as an SQL upgrade script used to make any necessary updates to the database schema. You have noticed that some extension deployments fail due to an error when running the SQL upgrade script. After further investigation, you realize that this is because the SQL script is being executed on all of your Amazon EC2 instances. How would you ensure that the SQL script is only executed once per deployment regardless of how many Amazon EC2 instances are running at the time?", 
         "Tag":"",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation":"",
-            "Ref":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "Use a 'Container command' within an Elastic Beanstalk configuration file to execute the script, ensuring that the 'leader only' flag is set to true.", "IsAnswer": true },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Make use of the Amazon EC2 metadata service to query whether the instance is marked as the leader in the Auto Scaling group. Only execute the script if 'true' is returned.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Use a 'Solo Command' within an Elastic Beanstalk configuration file to execute the script. The Elastic Beanstalk service will ensure that the command is only executed once.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Update the Amazon RDS security group to only allow write access from a single instance in the Auto Scaling group; that way, only one instance will successfully execute the script on the database.", "IsAnswer": false }]
     } 
      ,
        {
