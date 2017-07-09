@@ -355,7 +355,7 @@
        {
         "Id": 27,
         "Name": "You are doing a load testing exercise on your application hosted on AWS. While testing your Amazon RDS MySQL DB instance, you notice that when you hit 100% CPU utilization on it, your application becomes non- responsive. Your application is read-heavy. What are methods to scale your data tier to meet the application's needs? Choose 3 answers", 
-        "Tag":"",
+        "Tag":"ha&elasticity",
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "Add Amazon RDS DB read replicas, and have your application direct read queries to them.", "IsAnswer": true },
             { "Id": 1056, "QuestionId": 1010, "Name": "Add your Amazon RDS DB instance to an Auto Scaling group and configure your CloudWatch metric based on CPU utilization.", "IsAnswer": false },
@@ -367,16 +367,16 @@
     } 
      ,
        {
-        "Id": 21,
-        "Name": "", 
+        "Id": 28,
+        "Name": "Your mobile application includes a photo-sharing service that is expecting tens of thousands of users at launch. You will leverage Amazon Simple Storage Service (S3) for storage of the user Images, and you must decide how to authenticate and authorize your users for access to these images. You also need to manage the storage of these images. Which two of the following approaches should you use? Choose 2 answers", 
         "Tag":"",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation":"",
-            "Ref":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "Create an Amazon S3 bucket per user, and use your application to generate the S3 URI for the appropriate content.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Use AWS Identity and Access Management (IAM) user accounts as your application-level user database, and offload the burden of authentication from your application code.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Authenticate your users at the application level, and use AWS Security Token Service (STS) to grant token-based authorization to S3 objects.", "IsAnswer": true },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Authenticate your users at the application level, and send an SMS token message to the user. Create an Amazon S3 bucket with the same name as the SMS message token, and move the user's objects to that bucket.", "IsAnswer": false },
+            { "Id": 1059, "QuestionId": 1010, "Name": "Use a key-based naming scheme comprised from the user IDs for all user objects in a single Amazon S3 bucket.", "IsAnswer": true }],
+            "Explanation":"Separate S3 bukcet for each user is not feasible. There is no such thing as 'SMS token'. Using IAM for app-level user DB does not make sense. Eliminating these 3 incorrect options leaves us with the 2 right answers. Use STS and key-based naming scheme for S3 buckets."
     } 
      ,
        {
