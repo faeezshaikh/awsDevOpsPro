@@ -404,20 +404,19 @@
     } 
       ,
        {
-        "Id": 30,
-        "Name": "", 
+        "Id": 31,
+        "Name": "The project you are working on currently uses a single AWS CloudFormation template to deploy its AWS infrastructure, which supports a multi-tier web application. You have been tasked with organizing the AWS CloudFormation resources so that they can be maintained in the future, and so that different departments such as Networking and Security can review the architecture before it goes to Production. How should you do this in a way that accommodates each department, using their existing workflows?", 
         "Tag":"",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation":"",
-            "Ref":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "Organize the AWS CloudFormation template so that related resources are next to each other in the template, such as VPC subnets and routing rules for Networking and security groups and IAM information for Security.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Separate the AWS CloudFormation template into a nested structure that has individual templates for the resources that are to be governed by different departments, and use the outputs from the networking and security stacks for the application template that you control", "IsAnswer": true },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Organize the AWS CloudFormation template so that related resources are next to each other in the template for each department's use, leverage your existing continuous integration tool to constantly deploy changes from all parties to the Production environment, and then run tests for validation.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Use a custom application and the AWS SDK to replicate the resources defined in the current AWS CloudFormation template, and use the existing code review system to allow other departments to approve changes before altering the application for future deployments.", "IsAnswer": false }],
+            "Explanation":"Best option is to use nested templates for segregation."
     } 
       ,
        {
-        "Id": 30,
+        "Id": 32,
         "Name": "", 
         "Tag":"",
         "Options": [
