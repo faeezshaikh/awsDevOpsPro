@@ -406,7 +406,7 @@
        {
         "Id": 31,
         "Name": "The project you are working on currently uses a single AWS CloudFormation template to deploy its AWS infrastructure, which supports a multi-tier web application. You have been tasked with organizing the AWS CloudFormation resources so that they can be maintained in the future, and so that different departments such as Networking and Security can review the architecture before it goes to Production. How should you do this in a way that accommodates each department, using their existing workflows?", 
-        "Tag":"",
+        "Tag":"sec&goverance",
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "Organize the AWS CloudFormation template so that related resources are next to each other in the template, such as VPC subnets and routing rules for Networking and security groups and IAM information for Security.", "IsAnswer": false },
             { "Id": 1056, "QuestionId": 1010, "Name": "Separate the AWS CloudFormation template into a nested structure that has individual templates for the resources that are to be governed by different departments, and use the outputs from the networking and security stacks for the application template that you control", "IsAnswer": true },
@@ -417,15 +417,16 @@
       ,
        {
         "Id": 32,
-        "Name": "", 
-        "Tag":"",
+        "Name": "You currently run your infrastructure on Amazon EC2 instances behind an Auto Scaling group. All logs for you application are currently written to ephemeral storage. Recently your company experienced a major bug in code that made it through testing and was ultimately deployed to your fleet. This bug triggered your Auto Scaling group to scale up and back down before you could successfully retrieve the logs off your server to better assist you in troubleshooting the bug. Which technique should you use to make sure you are able to review your logs after your instances have shut down?", 
+        "Tag":"mm&l",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation":"",
-            "Ref":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "Configure the ephemeral policies on your Auto Scaling group to back up on terminate.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Configure your Auto Scaling policies to create a snapshot of all ephemeral storage on terminate.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Install the CloudWatch Logs Agent on your AMI, and configure CloudWatch Logs Agent to stream your logs.", "IsAnswer": true },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Install the CloudWatch monitoring agent on your AMI, and set up new SNS alert for CloudWatch metrics that triggers the CloudWatch monitoring agent to backup all logs on the ephemeral drive.", "IsAnswer": false },
+            { "Id": 1059, "QuestionId": 1010, "Name": "Install the CloudWatch monitoring agent on your AMI, Update your Auto Scaling policy to enable automated CloudWatch Log copy.", "IsAnswer": false }],
+            "Explanation":"You can use the CloudWatch Logs agent installer on an existing EC2 instance to install and configure the CloudWatch Logs agent. After installation is complete, the agent confirms that it has started and it stays running until you disable it. In addition to the agent, you can also publish log data using the AWS CLI, CloudWatch Logs SDK, or the CloudWatch Logs API. The AWS CLI is best suited for publishing data at the command line or through scripts. The CloudWatch Logs SDK is best suited for publishing log data directly from applications or building your own log publishing application.",
+            "Ref":"http://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/QuickStartEC2Instance.html"
     } 
       ,
        {
