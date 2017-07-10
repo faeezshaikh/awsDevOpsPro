@@ -586,7 +586,7 @@
        {
         "Id": 45,
         "Name": "Your application Amazon Elastic Compute Cloud (EC2) instances bootstrap by using a master configuration file that is kept in a version-enabled Amazon Simple Storage Service (S3) bucket. Which one of the following methods should you use to securely install the current configuration version onto the instances in a cost-effective way?", 
-        "Tag":"",
+        "Tag":"cd",
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "Create an Amazon DynamoDB table to store the different versions of the configuration file. Associate AWS Identity and Access Management (IAM) EC2 roles to the Amazon EC2 instances, and reference the DynamoDB table to get the latest file from Amazon Simple Storage Service (S3).", "IsAnswer": false },
             { "Id": 1056, "QuestionId": 1010, "Name": "Associate an IAM S3 role to the bucket, list the object versions using the Amazon S3 API, and then get the latest object.", "IsAnswer": false },
@@ -597,16 +597,15 @@
     } 
       ,
        {
-        "Id": 30,
-        "Name": "", 
-        "Tag":"",
+        "Id": 46,
+        "Name": "Your company operates a website for promoters to sell tickets for entertainment events. You are using a load balancer in front of an Auto Scaling group of web servers. Promotion of popular events can cause surges of website visitors. During scaling-out at these times, newly launched instances are unable to complete configuration quickly enough, leading to user disappointment. What options should you choose to improve scaling yet minimize costs? Choose 2 answers.", 
+        "Tag":"ha,elasticity,cd",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation":"",
-            "Ref":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "Create an AMI with the application pre-configured. Create a new Auto Scaling launch configuration using this new AMI, and configure the Auto Scaling group to launch with this AMI.", "IsAnswer": true },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Use Auto Scaling pre-warming to launch instances before they are required. Configure pre-warming to use the CPU trend CloudWatch metric for the group.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Publish a custom CloudWatch memo from your application on the number of tickets sold, and create an Auto Scaling policy based on this.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Use the history of past scaling events for similar event sales to predict future scaling requirements. Use the Auto Scaling scheduled scaling feature to vary the size of the fleet.", "IsAnswer": true},
+            { "Id": 1059, "QuestionId": 1010, "Name": "Configure an Amazon S3 bucket for website hosting. Upload into the bucket an HTML holding page with its x-amz-website-redirect-location' metadata property set to the load balancer endpoint. Configure Elastic Load Balancing to redirect to the holding page when the load on web servers is above a certain level.", "IsAnswer": false }]
     } 
       ,
        {
