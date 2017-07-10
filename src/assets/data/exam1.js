@@ -584,16 +584,16 @@
     } 
       ,
        {
-        "Id": 30,
-        "Name": "", 
+        "Id": 45,
+        "Name": "Your application Amazon Elastic Compute Cloud (EC2) instances bootstrap by using a master configuration file that is kept in a version-enabled Amazon Simple Storage Service (S3) bucket. Which one of the following methods should you use to securely install the current configuration version onto the instances in a cost-effective way?", 
         "Tag":"",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation":"",
-            "Ref":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "Create an Amazon DynamoDB table to store the different versions of the configuration file. Associate AWS Identity and Access Management (IAM) EC2 roles to the Amazon EC2 instances, and reference the DynamoDB table to get the latest file from Amazon Simple Storage Service (S3).", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Associate an IAM S3 role to the bucket, list the object versions using the Amazon S3 API, and then get the latest object.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Associate an IAM EC2 role to the instances, list the object versions using the Amazon S3 API, and then get the latest object.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Associate an IAM EC2 role to the instances, and then simply get the object from Amazon S3, because the default is the current version.", "IsAnswer": true},
+            { "Id": 1059, "QuestionId": 1010, "Name": "Store the IAM credentials in the Amazon EC2 user data for each instance, and then simply get the object from S3, because the default is the current version.", "IsAnswer": false }],
+            "Explanation":"Self explanatory. Use IAM role for EC2 instances and simply get the object since by default the current is the latest version of the script."
     } 
       ,
        {
