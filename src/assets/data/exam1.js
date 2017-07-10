@@ -443,20 +443,19 @@
     } 
       ,
        {
-        "Id": 30,
-        "Name": "", 
-        "Tag":"",
+        "Id": 34,
+        "Name": "During metric analysis, your team has determined that the company's website is experiencing response times during peak hours that are higher than anticipated. You currently rely on Auto Scaling to make sure that you are scaling your environment during peak windows. How can you improve your Auto Scaling policy to reduce this high response time? Choose 2 answers.", 
+        "Tag":"ha&elasticity",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation":"",
-            "Ref":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "Push custom metrics to CloudWatch to monitor your CPU and network bandwidth from your servers, which will allow your Auto Scaling policy to have better fine-grain insight.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Increase your Auto Scaling group's number of max servers.", "IsAnswer": true},
+            { "Id": 1057, "QuestionId": 1010, "Name": "Create a script that runs and monitors your servers; when it detects an anomaly in load, it posts to an Amazon SNS topic that triggers Elastic Load Balancing to add more servers to the load balancer.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Push custom metrics to CloudWatch for your application that include more detailed information about your web application, such as how many requests it is handling and how many are waiting to be processed.", "IsAnswer": true},
+            { "Id": 1059, "QuestionId": 1010, "Name": "Update the CloudWatch metric used for your Auto Scaling policy, and enable sub-minute granularity to allow auto scaling to trigger faster.", "IsAnswer": false }]
     } 
       ,
        {
-        "Id": 30,
+        "Id": 35,
         "Name": "", 
         "Tag":"",
         "Options": [
