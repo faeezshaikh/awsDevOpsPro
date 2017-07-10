@@ -491,16 +491,17 @@
     } 
       ,
        {
-        "Id": 30,
-        "Name": "", 
+        "Id": 38,
+        "Name": "You have a code repository that uses Amazon S3 as a data store. During a recent audit of your security controls, some concerns were raised about maintaining the integrity of the data in the Amazon S3 bucket. Another concern was raised around securely deploying code from Amazon S3 to applications running on Amazon EC2 in a virtual private cloud. What are some measures that you can implement to mitigate these concerns? Choose 2 answers.", 
         "Tag":"",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation":"",
-            "Ref":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "Add an Amazon S3 bucket policy with a condition statement to allow access only from Amazon EC2 instances with RFC 1918 IP addresses and enable bucket versioning.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Add an Amazon S3 bucket policy with a condition statement that requires multi-factor authentication in order to delete objects and enable bucket versioning.", "IsAnswer": true},
+            { "Id": 1057, "QuestionId": 1010, "Name": "Use a configuration management service to deploy AWS Identity and Access Management user credentials to the Amazon EC2 instances. Use these credentials to securely access the Amazon S3 bucket when deploying code.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Create an Amazon Identity and Access Management role with authorization to access the Amazon S3 bucket, and launch all of your application's Amazon EC2 instances with this role.", "IsAnswer": true },
+            { "Id": 1059, "QuestionId": 1010, "Name": "Use AWS Data Pipeline to lifecycle the data in your Amazon S3 bucket to Amazon Glacier on a weekly basis.", "IsAnswer": false },
+            { "Id": 1060, "QuestionId": 1010, "Name": "Use AWS Data Pipeline with multi-factor authentication to securely deploy code from the Amazon S3 bucket to your Amazon EC2 instances.", "IsAnswer": false }],
+            "Explanation":"Use IAM role and MFA to prevent accidental deletion of S3 objects."
     } 
       ,
        {
