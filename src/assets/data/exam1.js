@@ -571,16 +571,16 @@
     } 
       ,
        {
-        "Id": 30,
-        "Name": "", 
-        "Tag":"",
+        "Id": 44,
+        "Name": "You would like to run automated, continuous application level integration tests on all members of an Auto Scaling group. Which two options should you use? Choose 2 answers.", 
+        "Tag":"cd",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation":"",
-            "Ref":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "Use the AWS SDK to run the DescribeInstances API call on the Auto Scaling group, and then iterate over the members and remotely connect to each Amazon EC2 instance and run the integration tests.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Use the AWS SDK to run the DescribeAutoScalinglnstances API call on the Auto Scaling Group, iterate over the members using the Describe Instances API call, remotely connect to each Amazon EC2 instance, and then run the integration tests.", "IsAnswer": true },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Set up a custom CloudWatch metric with the output of your integration tests that are run by a scheduled process on each instance, and then set up a CloudWatch alert for any failures.", "IsAnswer": true},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Using an Auto Cycle Group lifecycle policy, define a scheduled task to run integration tests when a new Amazon EC2 instance enters the InService state.", "IsAnswer": false },
+            { "Id": 1059, "QuestionId": 1010, "Name": "Set up a custom CloudWatch metric that uses the output of the DescribeAutoScalingInstances API call to determine the HealthCheck status of the Amazon EC2 instances.", "IsAnswer": false },
+            { "Id": 1060, "QuestionId": 1010, "Name": "Using the Auto Cycle Group lifecycle policy, define a scheduled task to run integration tests on individual instances using the Amazon EC2 user data to export test data to CloudWatch Logs.", "IsAnswer": false }]
     } 
       ,
        {
