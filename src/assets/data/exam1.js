@@ -649,16 +649,15 @@
     } 
       ,
        {
-        "Id": 30,
-        "Name": "", 
+        "Id": 50,
+        "Name": "You have a high-traffic application running behind a load balancer with clients that are very sensitive to latency. How should you determine which back-end Amazon Elastic Compute Cloud application instances are causing increased latency so that they can be replaced?", 
         "Tag":"",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation":"",
-            "Ref":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "By using the Elastic Load Balancing Latency CloudWatch metric.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "By using the HTTP X-Forwarded-For header for requests from the load balancer.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "By running a distributed load test to the load balancer.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "By using the load balancer access logs.", "IsAnswer": true }],
+            "Explanation":"The ELB access logs should tell you based on timestamps which of the EC2 instances have high latency."
     } 
       ,
        {
