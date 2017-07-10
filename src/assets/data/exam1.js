@@ -530,16 +530,16 @@
     } 
       ,
        {
-        "Id": 30,
-        "Name": "", 
-        "Tag":"",
+        "Id": 41,
+        "Name": "Your company currently runs a large multi-tier web application. One component is an API service that all other components of your application rely on to perform read/write operations. This service must have high availability and zero downtime during deployments. Which technique should you use to provide cost-effective, zero-downtime deployments for this component?", 
+        "Tag":"VERIFY,cd",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation":"",
-            "Ref":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "Use an AWS CloudFormation template to re-deploy your application behind a load balancer, and launch a new AWS CloudFormation stack during each deployment. Update your load balancer to send traffic to the new stack, and then deploy your software. Leave your old stacks running, and tag their resources with the version for rollback.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Re-deploy your application on Elastic Beanstalk. During deployment, create a new version of your application, and create a new environment running that version in Elastic BeanStalk. Finally, take advantage of the Elastic Beanstalk Swap CNAME operation to switch to the new environment.", "IsAnswer": true},
+            { "Id": 1057, "QuestionId": 1010, "Name": "Re-deploy your application behind a load balancer that uses Auto Scaling groups. Create a new identical Auto Scaling group and associate it to your Amazon Route53 zone. Configure Amazon Route53 to auto- weight traffic over to the new Auto Scaling group when all instances are marked as healthy.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Re-deploy your application behind a load balancer using an AWS OpsWorks stack and use AWS OpsWorks stack versioning, during deployment create a new version of your application, tell AWS OpsWorks to launch the new version behind your load balancer, and when the new version is launched, terminate the old AWS OpsWorks stack.", "IsAnswer": false }],
+            "Explanation":"Best option is to use Elastic Beanstalk. OpsWorks is a config management service. Because Elastic Beanstalk performs an in-place update when you update your application versions, your application may become unavailable to users for a short period of time. It is possible to avoid this downtime by performing a blue/green deployment, where you deploy the new version to a separate environment, and then swap CNAMEs of the two environments to redirect traffic to the new version instantly. ",
+            "Ref":"http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.CNAMESwap.html"
     } 
       ,
        {
