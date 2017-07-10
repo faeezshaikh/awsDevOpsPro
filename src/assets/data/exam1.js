@@ -493,7 +493,7 @@
        {
         "Id": 38,
         "Name": "You have a code repository that uses Amazon S3 as a data store. During a recent audit of your security controls, some concerns were raised about maintaining the integrity of the data in the Amazon S3 bucket. Another concern was raised around securely deploying code from Amazon S3 to applications running on Amazon EC2 in a virtual private cloud. What are some measures that you can implement to mitigate these concerns? Choose 2 answers.", 
-        "Tag":"",
+        "Tag":"sec&gov",
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "Add an Amazon S3 bucket policy with a condition statement to allow access only from Amazon EC2 instances with RFC 1918 IP addresses and enable bucket versioning.", "IsAnswer": false },
             { "Id": 1056, "QuestionId": 1010, "Name": "Add an Amazon S3 bucket policy with a condition statement that requires multi-factor authentication in order to delete objects and enable bucket versioning.", "IsAnswer": true},
@@ -505,16 +505,16 @@
     } 
       ,
        {
-        "Id": 30,
-        "Name": "", 
-        "Tag":"",
+        "Id": 39,
+        "Name": "You have an application consisting of a stateless web server tier running on Amazon EC2 instances behind load balancer, and are using Amazon RDS with read replicas. Which of the following methods should you use to implement a self-healing and cost-effective architecture? Choose 2 answers.", 
+        "Tag":"VERIFY ANSWER, ha&elasticity",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation":"",
-            "Ref":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "Set up a third-party monitoring solution on a cluster of Amazon EC2 instances in order to emit custom CloudWatch metrics to trigger the termination of unhealthy Amazon EC2 instances.", "IsAnswer": true},
+            { "Id": 1056, "QuestionId": 1010, "Name": "Set up scripts on each Amazon EC2 instance to frequently send ICMP pings to the load balancer in order to determine which instance is unhealthy and replace it.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Set up an Auto Scaling group for the web server tier along with an Auto Scaling policy that uses the Amazon RDS DB CPU utilization CloudWatch metric to scale the instances.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Set up an Auto Scaling group for the web server tier along with an Auto Scaling policy that uses the Amazon EC2 CPU utilization CloudWatch metric to scale the instances.", "IsAnswer": true},
+            { "Id": 1059, "QuestionId": 1010, "Name": "Use a larger Amazon EC2 instance type for the web server tier and a larger DB instance type for the data storage layer to ensure that they don't become unhealthy.", "IsAnswer": false },
+            { "Id": 1060, "QuestionId": 1010, "Name": "Set up an Auto Scaling group for the database tier along with an Auto Scaling policy that uses the Amazon RDS read replica lag CloudWatch metric to scale out the Amazon RDS read replicas. G. Use an Amazon RDS Multi-AZ deployment.", "IsAnswer": false }]
     } 
       ,
        {
