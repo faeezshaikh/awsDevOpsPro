@@ -543,16 +543,18 @@
     } 
       ,
        {
-        "Id": 30,
-        "Name": "", 
-        "Tag":"",
+        "Id": 42,
+        "Name": "You want to build a new search tool feature for your monitoring system that will allow your information security team to quickly audit all API calls in your AWS accounts. What combination of AWS services can you use to develop and automate the backend processes supporting this tool? Choose 3 answers.", 
+        "Tag":"sec, gov, mm&l",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation":"",
-            "Ref":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "Create an Amazon CloudSearch domain for API call logs. Configure the search domain so that it can be used to index API call logs for the search tool.", "IsAnswer": true},
+            { "Id": 1056, "QuestionId": 1010, "Name": "Use AWS CloudTrail to store API call logs in an Amazon S3 bucket. Configure an Amazon Simple Notification Service topic called 'log-notification' that notifies subscribers when new logs are available. Subscribe an Amazon SQS queue to the topic.", "IsAnswer": true},
+            { "Id": 1057, "QuestionId": 1010, "Name": "Use Amazon Cloudwatch to ship AWS CloudTrail logs to your monitoring system.", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "Create an AWS Elastic Beanstalk application in worker role mode that uses an Amazon Simple Email Service (SES) domain to facilitate batch processing new API call log files retrieved from an Amazon S3 bucket into a search index.", "IsAnswer": false },
+            { "Id": 1059, "QuestionId": 1010, "Name": "Use AWS CloudTrail to store API call logs in an Amazon S3 bucket. Configure Amazon Simple Email Service (SES) to notify subscribers when new logs are available. Subscribe an Amazon SQS queue to the email domain.", "IsAnswer": false },
+            { "Id": 1060, "QuestionId": 1010, "Name": "Create Amazon Cloudwatch custom metrics for the API call logs. Configure a Cloudwatch search domain so that it can be used to index API call logs for the search tool.", "IsAnswer": false },
+            { "Id": 1061, "QuestionId": 1010, "Name": "Create an AWS Elastic Beanstalk application in worker role mode that uses an Amazon SQS queue to facilitate batch processing new API call log files retrieved from an Amazon S3 bucket into a search index.", "IsAnswer": true }],
+            "Explanation":"Shipping logs by CloudWatch does not make sense. Likewise the other solutions using SES are not the best options"
     } 
       ,
        {
