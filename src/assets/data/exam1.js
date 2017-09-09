@@ -792,10 +792,10 @@
         ,
         {
             "Id": 61,
-            "Name": "",
+            "Name": "You have been asked to use your departments existing continuous Integration (CI) tool to test a three-tier web architecture defined In an AWS CloudFormation template. The tool already supports AWS APIs and can launch new AWS CloudFormation stacks after polling version control. The CI tool reports on the success of the AWS CloudFormation stack creation by using the Describe Stacks API to look for the CREATE COMPLETE status. The architecture tiers defined in the template consist of: - One load balancer - Five Amazon EC2 instances running the web application - One multi-AZ Amazon RDS instance How would you implement this? Choose 2 answers",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1055, "QuestionId": 1010, "Name": "Define a 'WaitCondition' and a' WaitConditionHandle' for the output of a UserData command that does sanity checking of the application's post-install state.", "IsAnswer": false },
                 { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
                 { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
                 { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
