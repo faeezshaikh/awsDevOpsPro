@@ -767,16 +767,16 @@
         }
         ,
         {
-            "Id": 57,
-            "Name": "",
-            "Tag": "",
+            "Id": 59,
+            "Name": "Your team is responsible for an AWS Elastic Beanstalk application. The business requires that you move to a continuous deployment model, thus releasing updates to the application multiple times per day with zero downtime. What should you do to enable this and still be able to roll back to the previous version almost immediately in an emergency?",
+            "Tag": "cd",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Enable rolling updates in the Elastic Beanstalk environment and set an appropriate pause time for application startup.", "IsAnswer": true},
+                { "Id": 1056, "QuestionId": 1010, "Name": "Create a second Elastic Beanstalk environment that runs the new application version, and swap the environment CNAMEs", "IsAnswer": false},
+                { "Id": 1057, "QuestionId": 1010, "Name": "Configure the application to poll for a new application version in your code repository; download and install the new version to each running Elastic Beanstalk instance.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Create a second Elastic Beanstalk environment with the new application version, and configure the old environment to use the HTTP 301 response code to redirect clients to the new environment.", "IsAnswer": false }],
+            "Explanation": "You can enable and configure rolling updates in the Elastic Beanstalk Management Console. See link for details.",
+            "Ref": "http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.rollingupdates.html"
         }
         ,
         {
