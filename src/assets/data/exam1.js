@@ -857,15 +857,15 @@
         ,
         {
             "Id": 66,
-            "Name": "",
-            "Tag": "",
+            "Name": "You set up a scalable continuous integration platform on AWS. The platform consists of a master node that can delegate project build jobs to multiple slave nodes, all running on Amazon EC2. The build output will be stored in Amazon S3. You always have five slave nodes deployed. Each slave node can handle 10 build jobs simultaneously. Your master node publishes a custom Amazon CloudWatch metric with the name 'RunningBuildiobs' that Slows you to programmatically track how many build jobs are running across your platform. Which two configuration options will allow you to flexibly scale your platform to support more than 50 simultaneous build jobs while minimizing costs? Choose 2 answers",
+            "Tag": "cd&pa",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Place your fleet of slave nodes in an Auto Scaling group. Configure a CloudWatch alarm that triggers an Auto Scaling policy to launch Amazon EC2 Instances when 'RunningBuildJobs' is greater than 45 for more than five minutes.", "IsAnswer": true},
+                { "Id": 1056, "QuestionId": 1010, "Name": "Configure a CloudWatch alarm that sends an alert when 'RunningBuildJobs' is greater than 45 for more than five minutes. Use Amazon Simple Queue Service to process additional build jobs when the CloudWatch alarm is triggered.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Configure your fleet of slave nodes to fully utilize all of your purchased Amazon EC2 Heavy Utilization Reserved Instances. Configure a CloudWatch alarm that launches new Amazon EC2 instances when 'RunningBuildJobs' is less than 40 for more than five minutes.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Run your fleet of slave nodes in an Auto Scaling group. Configure a Cloudwatch alarm that launches new Amazon EC2 Dedicated Instances when 'RunningBuildJobs' is less than 40 for more than five minutes.", "IsAnswer": false },
+                { "Id": 1060, "QuestionId": 1010, "Name": "Place your fleet of slave nodes in an Auto Scaling group. Configure a CloudWatch alarm that triggers an Auto Scaling policy to terminate Amazon EC2 instances when 'RunningBuildJobs' is less than 40 for more than five minutes.", "IsAnswer": true }],
+            "Explanation": "Notice using these two options you are letting the AS policy to terminate Amazon EC2 instances when 'RunningBuildJobs' is less than 40 for more than five minutes AND launch Amazon EC2 Instances when 'RunningBuildJobs' is greater than 45 for more than five minutes."
         }
         ,
         {
