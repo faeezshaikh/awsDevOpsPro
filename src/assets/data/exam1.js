@@ -804,11 +804,11 @@
         }
         ,
         {
-            "Id": 57,
-            "Name": "",
-            "Tag": "",
+            "Id": 62,
+            "Name": "You are building a large, multi-tenant SaaS (software-as-a-service) application with a component that fetches data to process from a customer-specific Amazon S3 bucket in their account. How should you ensure that your application follows security best practices and limits risk when fetching data from customer-owned Amazon S3 buckets?",
+            "Tag": "security",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1055, "QuestionId": 1010, "Name": "Have users create an IAM user with a policy that grants read-only access to the Amazon S3 bucket required by your application, and store the corresponding access keys in an encrypted database that holds their account data.", "IsAnswer": false },
                 { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
                 { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
                 { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
