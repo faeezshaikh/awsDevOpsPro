@@ -864,21 +864,21 @@
                 { "Id": 1056, "QuestionId": 1010, "Name": "Configure a CloudWatch alarm that sends an alert when 'RunningBuildJobs' is greater than 45 for more than five minutes. Use Amazon Simple Queue Service to process additional build jobs when the CloudWatch alarm is triggered.", "IsAnswer": false },
                 { "Id": 1057, "QuestionId": 1010, "Name": "Configure your fleet of slave nodes to fully utilize all of your purchased Amazon EC2 Heavy Utilization Reserved Instances. Configure a CloudWatch alarm that launches new Amazon EC2 instances when 'RunningBuildJobs' is less than 40 for more than five minutes.", "IsAnswer": false },
                 { "Id": 1058, "QuestionId": 1010, "Name": "Run your fleet of slave nodes in an Auto Scaling group. Configure a Cloudwatch alarm that launches new Amazon EC2 Dedicated Instances when 'RunningBuildJobs' is less than 40 for more than five minutes.", "IsAnswer": false },
-                { "Id": 1060, "QuestionId": 1010, "Name": "Place your fleet of slave nodes in an Auto Scaling group. Configure a CloudWatch alarm that triggers an Auto Scaling policy to terminate Amazon EC2 instances when 'RunningBuildJobs' is less than 40 for more than five minutes.", "IsAnswer": true }],
+                { "Id": 1059, "QuestionId": 1010, "Name": "Place your fleet of slave nodes in an Auto Scaling group. Configure a CloudWatch alarm that triggers an Auto Scaling policy to terminate Amazon EC2 instances when 'RunningBuildJobs' is less than 40 for more than five minutes.", "IsAnswer": true }],
             "Explanation": "Notice using these two options you are letting the AS policy to terminate Amazon EC2 instances when 'RunningBuildJobs' is less than 40 for more than five minutes AND launch Amazon EC2 Instances when 'RunningBuildJobs' is greater than 45 for more than five minutes."
         }
         ,
         {
             "Id": 67,
-            "Name": "",
-            "Tag": "",
+            "Name": "You have just come from your Chief Information Security Officer's (CISO) office with the instructions to provide an audit report of all AWS network rules used by the organization's Amazon EC2 instances. You have discovered that a single Describe-Security-Groups API call will return all of an account's security groups and rules within a region. You create the following pseudo-code to create the required report: - Parse 'aws ec2 describe-security-groups' output - For each security group - Create report of ingress and egress rules. Which two additional pieces of logic should you include to meet the CISO's requirements? Choose 2 answers",
+            "Tag": "mm&l",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Parse security groups in each region.", "IsAnswer": true },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Parse security groups in each Availability Zone and region.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Evaluate VPC network access control lists.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Evaluate AWS CloudTrail logs.", "IsAnswer": false },
+                { "Id": 1059, "QuestionId": 1010, "Name": "Evaluate Elastic Load Balancing access control lists.", "IsAnswer": false },
+                { "Id": 1060, "QuestionId": 1010, "Name": "Parse CloudFront access control lists.", "IsAnswer": false }]
         }
         ,
         {
