@@ -909,15 +909,16 @@
         ,
         {
             "Id": 70,
-            "Name": "",
-            "Tag": "",
+            "Name": "You run a small online consignment marketplace. Interested sellers complete an online application in order to allow them to sell their products on your website. Once approved, they can post their product using a custom interface. From that point, you manage the shopping cart process so that when a buyer decides to buy a product, you handle the billing and coordinate the shipping. Part of this process requires sending emails to the buyer and the seller at different stages. Your system has been running on AWS for a few months. Occasionally, products are shipped before payments are cleared and emails are sent out of order. Furthermore, sometimes credit cards are being charged twice. How can you resolve these problems?",
+            "Tag": "elasticity",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Use the Amazon Simple Queue Service (SQS), and use a different set of workers for each task.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Use the Amazon Simple Workflow Service (SWF), and use a different set of workers for each task.", "IsAnswer": true },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Use the Simple Email Service (SES) to control the correct order of email delivery.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Use the AWS Data Pipeline service to control the process flow of the various tasks.", "IsAnswer": false },
+                { "Id": 1059, "QuestionId": 1010, "Name": "Use the Amazon Simple Queue Service (SQS), and use a single set of workers for each task.", "IsAnswer": false }],
+            "Explanation": "To co-ordinate tasks here use AWS SWF. Amazon SWF helps developers build, run, and scale background jobs that have parallel or sequential steps. ",
+            "Ref": "https://aws.amazon.com/swf/"
         }
         ,
         {
