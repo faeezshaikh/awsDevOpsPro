@@ -883,15 +883,16 @@
         ,
         {
             "Id": 68,
-            "Name": "",
-            "Tag": "",
+            "Name": "You are responsible for a large-scale video transcoding system that operates with an Auto Scaling group of video transcoding workers. The Auto Scaling group is configured with a minimum of 750 Amazon EC2 instances and a maximum of 1000 Amazon EC2 instances. You are using Amazon SQS to pass a message containing the URI for a video stored in Amazon S3 to the transcoding workers. An Amazon CloudWatch alarm has notified you that the queue depth is becoming very large. How can you resolve the alarm without the risk of increasing the time to transcode videos? Choose 2 answers.",
+            "Tag": "ha&elasticity",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Create a second queue in Amazon SQS.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Adjust the Amazon CloudWatch alarms for a higher queue depth.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Create a new Auto Scaling group with a launch configuration that has a larger Amazon EC2 instance type", "IsAnswer": true},
+                { "Id": 1058, "QuestionId": 1010, "Name": "Add an additional Availability Zone to the Auto Scaling group configuration.", "IsAnswer": false },
+                { "Id": 1059, "QuestionId": 1010, "Name": "Change the Amazon CloudWatch alarm so that it monitors the CPU utilization of the Amazon EC2 instances rather than the Amazon SQS queue depth.", "IsAnswer": false },
+                { "Id": 1060, "QuestionId": 1010, "Name": "Adjust the Auto Scaling group configuration to increase the maximum number of Amazon EC2 instances.", "IsAnswer": true }],
+            "Explanation": "Notice the two correct options are about horizontal and vertical scaling. To Horizontally scale increase the maximum number of Amazon EC2 instances in the AS configuration and to vertically scale use larger EC2 instance types. "
         }
         ,
         {
