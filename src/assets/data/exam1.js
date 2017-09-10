@@ -844,15 +844,15 @@
         ,
         {
             "Id": 65,
-            "Name": "",
-            "Tag": "",
+            "Name": "You have an application running on multiple Amazon EC2 instances within an Auto Scaling group. You notice that instances are being re-spawned as their health checks are failing in Amazon EC2. However, before you have a chance to diagnose the issue, the affected instances are being terminated by the Auto Scaling service. You receive notifications of health checks failing and investigate within 20 minutes. However, this is not enough time to troubleshoot the issue. What should you change that will enable you to troubleshoot the instance before it is terminated by the Auto Scaling service, while keeping costs minimal?",
+            "Tag": "mm&l",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Install the Amazon CloudWatch Logs Agent on the instance and configure application and system logs to be sent to the CloudWatch Logs service.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Configure an Amazon SNS topic and associate it with your Auto Scaling group's CloudWatch alarms. Configure an Amazon SQS queue as a subscriber of this topic, and then create a fleet of Amazon EC2 workers that poll this queue and instruct the Amazon EC2 Auto Scaling API to remove the instance from the Auto Scaling group when an alarm is triggered.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Create an Auto Scaling Group lifecycle hook to hold the instance in a 'terminating:wait' state until you have completed any troubleshooting. When you have completed troubleshooting, wait for the terminating state to expire, or notify to Scaling to complete the lifecycle hook and terminate the Instance.", "IsAnswer": true },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Change the 'DeleteOnTermination' flag to false in the Auto Scaling group configuration to ensure that instances are not deleted in the future.", "IsAnswer": false }],
+            "Explanation": "Auto Scaling lifecycle hooks enable you to perform custom actions by pausing instances as Auto Scaling launches or terminates them. For example, while your newly launched instance is paused, you could install or configure software on it.",
+            "Ref": "http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html"
         }
         ,
         {
