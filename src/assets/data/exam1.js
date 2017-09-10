@@ -796,11 +796,11 @@
             "Tag": "",
             "Options": [
                 { "Id": 1055, "QuestionId": 1010, "Name": "Define a 'WaitCondition' and a' WaitConditionHandle' for the output of a UserData command that does sanity checking of the application's post-install state.", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1056, "QuestionId": 1010, "Name": "Define a CustomResource and write a script that runs architecture-level Integration tests through the load balancer to the application and database for the state of multiple tiers.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Define a WaitCondition and use a WaitConditionHandle that leverages the AWS SDK to run the DescribeStacks API call until the CREATE COMPLETE status is returned.", "IsAnswer": true},
+                { "Id": 1058, "QuestionId": 1010, "Name": "Define a CustomResource that leverages the AWS SDK to run the DescribeStacks API call until the 'CREATE COMPLETE status is returned.", "IsAnswer": false },
+                { "Id": 1059, "QuestionId": 1010, "Name": "Define a UserDataHandle for the output of a UserData command that does sanity checking of the application's post-install state and runs integration tests on the state of multiple tiers through the load balancer to the application.", "IsAnswer": true},
+                { "Id": 1060, "QuestionId": 1010, "Name": "Define a UserDataHandle for the output of a CustomResource that does sanity checking of the application's post-install state.", "IsAnswer": false }]
         }
         ,
         {
