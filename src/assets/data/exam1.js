@@ -1026,15 +1026,16 @@
         }  ,
         {
             "Id": 80,
-            "Name": "",
-            "Tag": "",
+            "Name": "You have an ASP.NET web application running in Amazon Elastic Beanstalk. Your next version of the application requires a third-party Windows Installer package to be installed on the instance on first boot and before the application launches. Which options are possible? Choose 2 answers",
+            "Tag": "elastic",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "In the application's global.asax file, run msiexec.exe to install the package using process.start() in the Application Start event handler.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "In the source bundle's .ebextensions folder, create a file with a .config extension. In the file, under the 'packages' section and 'msi' package manager, include the package's URL.", "IsAnswer": true},
+                { "Id": 1057, "QuestionId": 1010, "Name": "Launch a new Amazon EC2 instance from the AMI used by the environment. Log into the instance, install the package and run sysprep. Create a new AMI. Configure the environment to use the new AMI.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "In the environment's configuration, edit the instances configuration and add the package's URL to the 'Packages' section.", "IsAnswer": true},
+                { "Id": 1059, "QuestionId": 1010, "Name": "In the source bundle's .ebextensions folder, create a 'Packages' folder. Place the package in the folder.", "IsAnswer": false }],
+            "Explanation": "See link for details on how to install a .NET app on Elastic Beanstalk",
+            "Ref": "http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_NET.quickstart.html"
         },
         {
             "Id": 81,
