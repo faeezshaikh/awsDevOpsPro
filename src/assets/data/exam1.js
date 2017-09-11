@@ -980,15 +980,13 @@
         }  ,
         {
             "Id": 76,
-            "Name": "",
-            "Tag": "",
+            "Name": "A web application is being actively developed by multiple development teams within your organization. You have created a self-service portal-driven by AWS CloudFormation and the AWS APIs-that allows testers to select a code branch containing a new feature that they want to test. The portal will then provision an environment and deploy the right branch of code to it. Recently you have noticed that a large number of environments contain broken builds. You want to introduce a set of automated browser tests that are executed on a new environment before the environment is available to the tester. This way a tester does not waste time trying to test new features in a broken environment. Select a suitable way to implement such a feature into the existing self-service portal:",
+            "Tag": "cd&pa",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Specify your automated tests in the 'tests' section of the AWS CloudFormation template. AWS CloudFormation will then execute the tests on your behalf as part of the environment build.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Configure a centralized test server that hosts an automated browser testing framework. Use an AWS CloudFormation custom resource to notify the centralized test server, via an Amazon SNS topic, that a new environment has been initialized. The centralized test server can then execute the tests before sending the results back to the AWS CloudFormation service.", "IsAnswer": true},
+                { "Id": 1057, "QuestionId": 1010, "Name": "Pass the test scripts to the cfn-init service via the 'tests' section of the AWS::CloudFormation::Init metadata. Cfn-init will then execute these tests and return the result to the AWS CloudFormation service.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Configure a centralized test server that hosts an automated browser testing framework. Include an Amazon SES email resource under the outputs section of your AWS CloudFormation template. This we send an email to your centralized test server, informing it that the environment is ready for tests.", "IsAnswer": false }]
         }  ,
         {
             "Id": 77,
