@@ -946,15 +946,14 @@
         }  ,
         {
             "Id": 73,
-            "Name": "",
-            "Tag": "",
+            "Name": "Your application uses Amazon SQS and Auto Scaling to process background jobs. The Auto Scaling policy is based on the number of messages in the queue, with a maximum Instance count of 100. Since the application was launched, the group has never scaled above 50. The Auto Scaling group has now scaled to 100, the queue size is increasing, and very few Jobs are being completed. The number of messages being sent to the queue is at normal levels. What should you do to identify why the queue size is unusually high, and to reduce it?",
+            "Tag": "ha&elastic",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Temporarily increase the Auto Scaling group's desired value to 200. When the queue size has been reduced, reduce it to 50.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Analyze the application logs to identify possible reasons for message processing failure and resolve the cause for failures.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Create additional Auto Scaling groups, enabling the processing of the queue to be performed in parallel.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Analyze CloudTrail logs for Amazon SQS to ensure that the instances' Amazon EC2 role has permission to receive messages from the queue.", "IsAnswer": false }],
+            "Explanation": "The most correct option is to start by troubleshooting the logs to see if there are any failures to process the SQS messages."
         }  ,
         {
             "Id": 74,
