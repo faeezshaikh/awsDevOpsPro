@@ -923,15 +923,14 @@
         ,
         {
             "Id": 71,
-            "Name": "",
-            "Tag": "",
+            "Name": "Your application has an Auto Scaling group of m3.large instances running an application that receives messages from an Amazon SQS queue. After a while, the number of instances reaches the maximum set for the group and the number of messages on the queue continues to increase. You have discovered that a third- party library used by the application has a bug that causes a memory leak. What cost-effective steps can you take to continue message processing while the library developer fixes the bug?",
+            "Tag": "mm&l",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Enable Elastic Load Balancing health checks for the Auto Scaling group. When Elastic Load Balancing has detected a failure, Auto Scaling will terminate the failing application's instance and launch a new one.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Use Amazon EC2 instance memory usage CloudWatch metrics to raise alerts when they reach a defined level and send a message to Auto Scaling to fail the instance health check.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Use application monitoring on the instance to restart the application when memory usage reaches a defined level.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Create a new Auto Scaling launch configuration to use the r3.large instance type. Update the Auto Scaling group with the new launch configuration.", "IsAnswer": true}],
+            "Explanation": "The only correct option is to vertically scale by using a larfer r3.large instance till the memory leak issue is fixed by the library developer"
         }
         ,
         {
