@@ -1022,7 +1022,7 @@
                 { "Id": 1056, "QuestionId": 1010, "Name": "Update your CloudWatch metric granularity config for all Amazon EC2 memory metrics to support five-second granularity. Create a CloudWatch alarm that triggers an Amazon SNS notification to page your team when the application memory becomes too large.", "IsAnswer": false },
                 { "Id": 1057, "QuestionId": 1010, "Name": "Update your AWS CloudFormation configuration to take advantage of Auto Scaling groups. Configure an Auto Scaling group policy to trigger off your custom CloudWatch metrics.", "IsAnswer": true},
                 { "Id": 1058, "QuestionId": 1010, "Name": "Create a custom CloudWatch metric that you push your JVM memory usage to create a Cloudwatch alarm that triggers an Amazon SNS notification to page your team when the application memory usage becomes too large.", "IsAnswer": true},
-                { "Id": 1059, "QuestionId": 1010, "Name": "Update your AWS CloudFormation configuration to take advantage of CloudWatch metrics Agent. Configure the CloudWatch Metrics Agent to monitor memory usage and trigger an Amazon SNS alarm.", "IsAnswer": false }],
+                { "Id": 1059, "QuestionId": 1010, "Name": "Update your AWS CloudFormation configuration to take advantage of CloudWatch metrics Agent. Configure the CloudWatch Metrics Agent to monitor memory usage and trigger an Amazon SNS alarm.", "IsAnswer": false }]
         }  ,
         {
             "Id": 80,
