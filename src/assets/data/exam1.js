@@ -1015,15 +1015,14 @@
         }  ,
         {
             "Id": 79,
-            "Name": "",
-            "Tag": "",
+            "Name": "Customers have recently been complaining that your web application has randomly stopped responding. During a deep dive of your logs, the team has discovered a major bug in your new Java web application. This bug is causing a memory leak that eventually causes the application to crash. Your web application runs on Amazon EC2 and was built with AWS CloudFormation. Which techniques should you use to help detect these problems faster, as well as help eliminate the server's unresponsiveness? Choose 2 answers",
+            "Tag": "mm&l / gov",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Update your AWS CloudFormation configuration and enable a CustomResource that uses cfn-signal to detect memory leaks.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Update your CloudWatch metric granularity config for all Amazon EC2 memory metrics to support five-second granularity. Create a CloudWatch alarm that triggers an Amazon SNS notification to page your team when the application memory becomes too large.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Update your AWS CloudFormation configuration to take advantage of Auto Scaling groups. Configure an Auto Scaling group policy to trigger off your custom CloudWatch metrics.", "IsAnswer": true},
+                { "Id": 1058, "QuestionId": 1010, "Name": "Create a custom CloudWatch metric that you push your JVM memory usage to create a Cloudwatch alarm that triggers an Amazon SNS notification to page your team when the application memory usage becomes too large.", "IsAnswer": true},
+                { "Id": 1059, "QuestionId": 1010, "Name": "Update your AWS CloudFormation configuration to take advantage of CloudWatch metrics Agent. Configure the CloudWatch Metrics Agent to monitor memory usage and trigger an Amazon SNS alarm.", "IsAnswer": false }],
         }  ,
         {
             "Id": 80,
