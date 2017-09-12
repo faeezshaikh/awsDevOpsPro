@@ -1128,15 +1128,15 @@
         } ,
         {
             "Id": 88,
-            "Name": "",
+            "Name": "You have been asked to de-risk deployments at your company. Specifically, the CEO is concerned about outages that occur because of accidental inconsistencies between Staging and Production, which sometimes cause unexpected behaviors in Production even when Staging tests pass. You already use Docker to get high consistency between Staging and Production for the application environment on your EC2 instances. How do you further de-risk the rest of the execution environment, since in AWS, there are many service components you may use beyond EC2 virtual machines?",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Develop models of your entire cloud system in CloudFormation. Use this model in Staging and Production to achieve greater parity.", "IsAnswer": true},
+                { "Id": 1056, "QuestionId": 1010, "Name": "Use AWS Config to force the Staging and Production stacks to have configuration parity. Any differences will be detected for you so you are aware of risks.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Use AMIs to ensure the whole machine, including the kernel of the virual machines, is consistent, since Docker uses Linux Container (LXC) technology, and we need to make sure the container environment is consistent.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Use AWS ECS and Docker clustering. This will make sure that the AMIs and machine sizes are the same across both environments.", "IsAnswer": false }],
+            "Explanation": "CloudFormation's JSON Templates allow declarative version control of repeatably deployable models of entire AWS clouds.",
+            "Ref": "https://blogs.aws.amazon.com/application-management/blog/category/Best+practices"
         } ,
         {
             "Id": 89,
