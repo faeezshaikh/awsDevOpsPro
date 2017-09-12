@@ -1091,15 +1091,15 @@
         ,
         {
             "Id": 85,
-            "Name": "",
-            "Tag": "",
+            "Name": "You are designing a system which needs, at minumum, 8 m4.large instances operating to service traffic. When designing a system for high availability in the us-east-1 region, which has 6 Availability Zones, you company needs to be able to handle death of a full availability zone. How should you distribute the servers, to save as much cost as possible, assuming all of the EC2 nodes are properly linked to an ELB? Your VPC account can utilize us-east-1's AZ's a through f, inclusive.",
+            "Tag": "ha&elastic",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "3 servers in each of AZ's a through d, inclusive.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "8 servers in each of AZ's a and b.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "2 servers in each of AZ's a through e, inclusive.", "IsAnswer": true },
+                { "Id": 1058, "QuestionId": 1010, "Name": "4 servers in each of AZ's a through c, inclusive.", "IsAnswer": false }],
+            "Explanation": "You need to design for N+1 redundancy on Availability Zones. ZONE_COUNT = (REQUIRED_INSTANCES / INSTANCE_COUNT_PER_ZONE) + 1. To minimize cost, spread the instances across as many possible zones as you can. By using a though e, you are allocating 5 zones. Using 2 instances, you have 10 total instances. If a single zone fails, you have 4 zones left, with 2 instances each, for a total of 8 instances. By spreading out as much as possible, you have increased cost by only 25% and significantly de-risked an availability zone failure.",
+            "Ref": "http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability- zones.html#concepts- regions-availability-zones"
         }
         ,
         {
