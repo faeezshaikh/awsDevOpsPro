@@ -1039,6 +1039,32 @@
         },
         {
             "Id": 81,
+            "Name": "For AWS Auto Scaling, what is the first transition state an instance enters after leaving steady state when scaling in due to health check failure or decreased load?",
+            "Tag": "ha",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "Terminating", "IsAnswer": true},
+                { "Id": 1056, "QuestionId": 1010, "Name": "Detaching", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Terminating:Wait", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "EnteringStandby", "IsAnswer": false }],
+            "Explanation": "When Auto Scaling responds to a scale in event, it terminates one or more instances. These instances are detached from the Auto Scaling group and enter the Terminating state.",
+            "Ref": "http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/AutoScalingGroupLifecycle.html"
+        }
+        ,
+        {
+            "Id": 82,
+            "Name": "",
+            "Tag": "",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation": "",
+            "Ref": ""
+        }
+        ,
+        {
+            "Id": 83,
             "Name": "",
             "Tag": "",
             "Options": [
