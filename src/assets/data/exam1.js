@@ -1140,18 +1140,30 @@
         } ,
         {
             "Id": 89,
-            "Name": "",
+            "Name": "You are creating a new API for video game scores. Reads are 100 times more common than writes, and the top 1% of scores are read 100 times more frequently than the rest of the scores. What's the best design for this system, using DynamoDB?",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "DynamoDB table with 100x higher read than write throughput, with CloudFront caching.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "DynamoDB table with roughly equal read and write throughput, with CloudFront caching.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "DynamoDB table with 100x higher read than write throughput, with ElastiCache caching.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "DynamoDB table with roughly equal read and write throughput, with ElastiCache caching.", "IsAnswer": true }],
+            "Explanation": "Because the 100x read ratio is mostly driven by a small subset, with caching, only a roughly equal number of reads to writes will miss the cache, since the supermajority will hit the top 1% scores. Knowing we need to set the values roughly equal when using caching, we select AWS ElastiCache, because CloudFront cannot directly cache DynamoDB queries, and ElastiCache is an excellent in-memory cache for database queries, rather than a distributed proxy cache for content delivery. ... One solution would be to cache these reads at the application layer. Caching is a technique that is used in many high-throughput applications, offloading read activity on hot items to the cache rather than to the database. Your application can cache the most popular items in memory, or use a product such as ElastiCache to do the same.",
+            "Ref": "http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GuidelinesForTables.html# GuidelinesForTables.CachePopularItem"
         } ,
         {
             "Id": 90,
+            "Name": "You were just hired as a DevOps Engineer for a startup. Your startup uses AWS for 100% of their infrastructure. They currently have no automation at all for deployment, and they have had many failures while trying to deploy to production. The company has told you deployment process risk mitigation is the most important thing now, and you have a lot of budget for tools and AWS resources. Their stack:- 2-tier API, Data stored in DynamoDB or S3, (depending on type), Compute layer is EC2 in Auto Scaling Groups, They use Route53 for DNS pointing to an ELB, An ELB balances load across the EC2 instances. The scaling group properly varies between 4 and 12 EC2 servers. Which of the following approaches, given this company's stack and their priorities, best meets the company's needs?",
+            "Tag": "ha, elastic",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "Model the stack in AWS Elastic Beanstalk as a single Application with multiple Environments. Use Elastic Beanstalk's Rolling Deploy option to progressively roll out application code changes when promoting across environments.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Model the stack in 3 CloudFormation templates: Data layer, compute layer, and networking layer. Write stack deployment and integration testing automation following Blue-Green methodologies.", "IsAnswer": true },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Model the stack in AWS OpsWorks as a single Stack, with 1 compute layer and its associated ELB. Use Chef and App Deployments to automate Rolling Deployment.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Model the stack in 1 CloudFormation template, to ensure consistency and dependency graph resolution. Write deployment and integration testing automation following Rolling Deployment methodologies.", "IsAnswer": false }],
+            "Explanation": "AWS recommends Blue-Green for zero-downtime deploys. Since you use DynamoDB, and neither AWS OpsWorks nor AWS Elastic Beanstalk directly supports DynamoDB, the option selecting CloudFormation and Blue-Green is correct. You use various strategies to migrate the traffic from your current application stack (blue) to a new version of the application (green). This is a popular technique for deploying applications with zero downtime. The deployment services like AWS Elastic Beanstalk, AWS CloudFormation, or AWS OpsWorks are particularly useful as they provide a simple way to clone your running application stack. You can set up a new version of your application (green) by simply cloning current version of the application (blue).",
+            "Ref": "https://d0.awsstatic.com/whitepapers/overview-of-deployment-options-on-aws.pdf"
+        },
+        {
+            "Id": 91,
             "Name": "",
             "Tag": "",
             "Options": [
@@ -1162,6 +1174,7 @@
             "Explanation": "",
             "Ref": ""
         }
+
 
 
 
