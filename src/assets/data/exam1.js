@@ -1116,15 +1116,15 @@
         } ,
         {
             "Id": 87,
-            "Name": "",
+            "Name": "What is web identity federation?",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Use of an identity provider like Google or Facebook to become an AWS IAM User.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Use of an identity provider like Google or Facebook to exchange for temporary AWS security credentials.", "IsAnswer": true },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Use of AWS IAM User tokens to log in as a Google or Facebook user.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Use of AWS STS Tokens to log in as a Google or Facebook user.", "IsAnswer": false }],
+            "Explanation": "Web Id Federation is where users of your app can sign in using a well-known identity provider (IdP) --such as Login with Amazon, Facebook, Google, or any other OpenID Connect (OIDC)-compatible IdP, receive an authentication token, and then exchange that token for temporary security credentials in AWS that map to an IAM role with permissions to use the resources in your AWS account.",
+            "Ref": "http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_oidc.html"
         } ,
         {
             "Id": 88,
