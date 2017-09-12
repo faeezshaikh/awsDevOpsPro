@@ -1065,6 +1065,32 @@
         ,
         {
             "Id": 83,
+            "Name": "When thinking of AWS Elastic Beanstalk's model, which is true?",
+            "Tag": "cd",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "Applications have many deployments, deployments have many environments.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Environments have many applications, applications have many deployments.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Applications have many environments, environments have many deployments.", "IsAnswer": true },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Deployments have many environments, environments have many applications.", "IsAnswer": false }],
+            "Explanation": "Applications group logical services. Environments belong to Applications, and typically represent different deployment levels (dev, stage, prod, fo forth). Deployments belong to environments, and are pushes of bundles of code for the environments to run.",
+            "Ref": "http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html"
+        }
+        ,
+        {
+            "Id": 84,
+            "Name": "",
+            "Tag": "",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation": "",
+            "Ref": ""
+        }
+        ,
+        {
+            "Id": 85,
             "Name": "",
             "Tag": "",
             "Options": [
