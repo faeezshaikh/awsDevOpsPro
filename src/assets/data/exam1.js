@@ -1055,9 +1055,9 @@
             "Name": "You are hired as the new head of operations for a SaaS company. Your CTO has asked you to make debugging any part of your entire operation simpler and as fast as possible. She complains that she has no idea what is going on in the complex, service-oriented architecture, because the developers just log to disk, and it's very hard to find errors in logs on so many services. How can you best meet this requirement and satisfy your CTO?",
             "Tag": "mm&l",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "Copy all log files into AWS S3 using a cron job on each instance. Use an S3 Notification Configuration on the <code>PutBucket</code> event and publish events to AWS Lambda. Use the Lambda to analyze logs as soon as they come in and flag issues.", "IsAnswer": false },
+                { "Id": 1055, "QuestionId": 1010, "Name": "Copy all log files into AWS S3 using a cron job on each instance. Use an S3 Notification Configuration on the 'PutBucket' event and publish events to AWS Lambda. Use the Lambda to analyze logs as soon as they come in and flag issues.", "IsAnswer": false },
                 { "Id": 1056, "QuestionId": 1010, "Name": "Begin using CloudWatch Logs on every service. Stream all Log Groups into S3 objects. Use AWS EMR cluster jobs to perform ad-hoc MapReduce analysis and write new queries when needed.", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "Copy all log files into AWS S3 using a cron job on each instance. Use an S3 Notification Configuration on the <code>PutBucket</code> event and publish events to AWS Kinesis. Use Apache Spark on AWS EMR to perform at-scale stream processing queries on the log chunks and flag issues.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Copy all log files into AWS S3 using a cron job on each instance. Use an S3 Notification Configuration on the 'PutBucket' event and publish events to AWS Kinesis. Use Apache Spark on AWS EMR to perform at-scale stream processing queries on the log chunks and flag issues.", "IsAnswer": false },
                 { "Id": 1058, "QuestionId": 1010, "Name": "Begin using CloudWatch Logs on every service. Stream all Log Groups into an AWS Elasticsearch Service Domain running Kibana 4 and perform log analysis on a search cluster.", "IsAnswer": true}],
             "Explanation": "The Elasticsearch and Kibana 4 combination is called the ELK Stack, and is designed specifically for real-time, ad-hoc log analysis and aggregation. All other answers introduce extra delay or require pre-defined queries. Amazon Elasticsearch Service is a managed service that makes it easy to deploy, operate, and scale Elasticsearch in the AWS Cloud. Elasticsearch is a popular open-source search and analytics engine for use cases such as log analytics, real-time application monitoring, and click stream analytics.",
             "Ref": "https://aws.amazon.com/elasticsearch-service/"
@@ -1104,15 +1104,15 @@
         ,
         {
             "Id": 86,
-            "Name": "",
-            "Tag": "",
+            "Name": "You need to create a Route53 record automatically in CloudFormation when not running in production during all launches of a Template. How should you implement this?",
+            "Tag": "ha",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Use a 'Parameter' for 'Environment', and add a 'Condition' on the Route53 'Resource' in the template to create the record only when 'environment' is not 'production'.", "IsAnswer": true},
+                { "Id": 1056, "QuestionId": 1010, "Name": "Create two templates, one with the Route53 record value and one with a null value for the record. Use the one without it when deploying to production.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Use a 'Parameter' for 'environment', and add a 'Condition' on the Route53 'Resource' in the template to create the record with a null string when 'environment' is 'production'.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Create two templates, one with the Route53 record and one without it. Use the one without it when deploying to production.", "IsAnswer": false }],
+            "Explanation": "The best way to do this is with one template, and a Condition on the resource. Route53 does not allow null strings for records.",
+            "Ref": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/conditions-section- structure.html"
         } ,
         {
             "Id": 87,
