@@ -1272,15 +1272,15 @@
         },
         {
             "Id": 100,
-            "Name": "",
-            "Tag": "",
+            "Name": "Which major database needs a BYO license?",
+            "Tag": "sec&governance",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "PostgreSQL", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "MariaDB", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "MySQL", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Oracle", "IsAnswer": true}],
+            "Explanation": "Oracle is not open source, and requires a bring your own license model.",
+            "Ref": "http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Oracle.html"
         }
         ,
         {
