@@ -1212,15 +1212,15 @@
         },
         {
             "Id": 95,
-            "Name": "",
+            "Name": "When thinking of DynamoDB, what are true of Local Secondary Key properties?",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Either the partition key or the sort key can be different from the table, but not both.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Only the sort key can be different from the table.", "IsAnswer": true},
+                { "Id": 1057, "QuestionId": 1010, "Name": "The partition key and sort key can be different from the table.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Only the partition key can be different from the table.", "IsAnswer": false }],
+            "Explanation": "Local secondary index — an index that has the same partition key as the base table, but a different sort key. A local secondary index is 'local' in the sense that every partition of a local secondary index is scoped to a base table partition that has the same partition key value.",
+            "Ref": "http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SecondaryIndexes.html"
         },
         {
             "Id": 96,
