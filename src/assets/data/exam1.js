@@ -1248,15 +1248,15 @@
         },
         {
             "Id": 98,
-            "Name": "",
+            "Name": "Which of the following are not valid sources for OpsWorks custom cookbook repositories?",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "HTTP(S)", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Git", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "AWS EBS", "IsAnswer": true },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Subversion", "IsAnswer": false }],
+            "Explanation": "Linux stacks can install custom cookbooks from any of the following repository types: HTTP or Amazon S3 archives. They can be either public or private, but Amazon S3 is typically the preferred option for a private archive. Git and Subversion repositories provide source control and the ability to have multiple versions.",
+            "Ref": "http://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook-installingcustom- enable.html"
         },
         {
             "Id": 99,
