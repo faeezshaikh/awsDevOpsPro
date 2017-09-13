@@ -1236,15 +1236,15 @@
         },
         {
             "Id": 97,
-            "Name": "",
+            "Name": "Which of these techniques enables the fastest possible rollback times in the event of a failed deployment?",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Rolling; Immutable", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Rolling; Mutable", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Canary or A/B", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Blue-Green", "IsAnswer": true }],
+            "Explanation": "AWS specifically recommends Blue-Green for super-fast, zero-downtime deploys - and thus rollbacks, which are redeploying old code. You use various strategies to migrate the traffic from your current application stack (blue) to a new version of the application (green). This is a popular technique for deploying applications with zero downtime.",
+            "Ref": "https://d0.awsstatic.com/whitepapers/overview-of-deployment-options-on-aws.pdf"
         },
         {
             "Id": 98,
