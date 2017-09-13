@@ -1188,15 +1188,15 @@
         },
         {
             "Id": 93,
-            "Name": "",
+            "Name": "There are a number of ways to purchase compute capacity on AWS. Which orders the price per compute or memory unit from LOW to HIGH (cheapest to most expensive), on average? A) On-Demand B) Spot C) Reserved",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "A, B, C", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "C, B, A", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "B, C, A", "IsAnswer": true },
+                { "Id": 1058, "QuestionId": 1010, "Name": "A, C, B", "IsAnswer": false }],
+            "Explanation": "Spot instances are usually many, many times cheaper than on-demand prices. Reserved instances, depending on their term and utilization, can yield approximately 33% to 66% cost savings. On-Demand prices are the baseline price and are the most expensive way to purchase EC2 compute time.",
+            "Ref": "https://d0.awsstatic.com/whitepapers/Cost_Optimization_with_AWS.pdf"
         },
         {
             "Id": 94,
