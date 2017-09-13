@@ -1200,15 +1200,15 @@
         },
         {
             "Id": 94,
-            "Name": "",
-            "Tag": "",
+            "Name": "You run operations for a company that processes digital wallet payments at a very high volume. One second of downtime, during which you drop payments or are otherwise unavailable, loses you on average USD 100. You balance the financials of the transaction system once per day. Which database setup is best suited to address this business risk?",
+            "Tag": "mm&l",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "A multi-AZ RDS deployment with synchronous replication to multiple standbys and read-replicas for fast failover and ACID properties.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "A multi-region, multi-master, active-active RDS configuration using database-level ACID design principles with database trigger writes for replication.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "A multi-region, multi-master, active-active DynamoDB configuration using application control-level BASE design principles with change-stream write queue buffers for replication.", "IsAnswer": true},
+                { "Id": 1058, "QuestionId": 1010, "Name": "A multi-AZ DynamoDB setup with changes streamed to S3 via AWS Kinesis, for highly durable storage and BASE properties.", "IsAnswer": false }],
+            "Explanation": "Only the multi-master, multi-region DynamoDB answer makes sense. Multi-AZ deployments do not provide sufficient availability when a business loses USD 360,000 per hour of unavailability. As RDS does not natively support multi-region, and ACID does not perform well/at all over large distances between regions, only the DynamoDB answer works.",
+            "Ref": "http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.CrossRegionRepl .html"
         },
         {
             "Id": 95,
