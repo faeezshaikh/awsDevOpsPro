@@ -1224,15 +1224,15 @@
         },
         {
             "Id": 96,
-            "Name": "",
+            "Name": "Which deployment method, when using AWS Auto Scaling Groups and Auto Scaling Launch Configurations, enables the shortest time to live for individual servers?",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Pre-baking AMIs with all code and configuration on deploys.", "IsAnswer": true },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Using a Dockerfile bootstrap on instance launch.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Using UserData bootstrapping scripts.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Using AWS EC2 Run Commands to dynamically SSH into fleets.", "IsAnswer": false }],
+            "Explanation": "Note that the bootstrapping process can be slower if you have a complex application or multiple applications to install. Managing a fleet of applications with several build tools and dependencies can be a challenging task during rollouts. Furthermore, your deployment service should be designed to do faster rollouts to take advantage of Auto Scaling. Prebaking is a process of embedding a significant portion of your application artifacts within your base AMI. During the deployment process you can customize application installations by using EC2 instance artifacts such as instance tags, instance metadata, and Auto Scaling groups.",
+            "Ref": "https://d0.awsstatic.com/whitepapers/overview-of-deployment-options-on-aws.pdf"
         },
         {
             "Id": 97,
