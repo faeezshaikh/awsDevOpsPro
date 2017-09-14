@@ -1311,15 +1311,14 @@
         ,
         {
             "Id": 103,
-            "Name": "",
+            "Name": "A user is creating a new EBS volume from an existing snapshot. The snapshot size shows 10 GB. Can the user create a volume of 30 GB from that snapshot?",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Provided the original volume has set the change size attribute to true", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Yes", "IsAnswer": true },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Provided the snapshot has the modify size attribute set as true", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "No", "IsAnswer": false }],
+            "Explanation": "A user can always create a new EBS volume of a higher size than the original snapshot size. The user cannot create a volume of a lower size. When the new volume is created the size in the instance will be shown as the original size. The user needs to change the size of the device with resize2fs or other OS specific commands."
         }
 
         ,
