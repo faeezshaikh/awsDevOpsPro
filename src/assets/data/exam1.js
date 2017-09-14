@@ -1392,15 +1392,15 @@
         ,
         {
             "Id": 109,
-            "Name": "",
-            "Tag": "",
+            "Name": "When thinking of DynamoDB, what are true of Global Secondary Key properties?",
+            "Tag": "DynamoDB",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "The partition key and sort key can be different from the table.", "IsAnswer": true },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Only the partition key can be different from the table.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Either the partition key or the sort key can be different from the table, but not both.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Only the sort key can be different from the table.", "IsAnswer": false }],
+            "Explanation": "Global secondary index -- an index with a partition key and a sort key that can be different from those on the table. A global secondary index is considered 'global' because queries on the index can span all of the data in a table, across all partitions.",
+            "Ref": "http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SecondaryIndexes.html"
         }
 
         ,
