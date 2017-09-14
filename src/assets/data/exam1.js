@@ -1299,7 +1299,7 @@
         {
             "Id": 102,
             "Name": "When a user is detaching an EBS volume from a running instance and attaching it to a new instance, which of the below mentioned options should be followed to avoid file system damage?",
-            "Tag": "",
+            "Tag": "EBS",
             "Options": [
                 { "Id": 1055, "QuestionId": 1010, "Name": "Unmount the volume first", "IsAnswer": true },
                 { "Id": 1056, "QuestionId": 1010, "Name": "Stop all the I/O of the volume before processing", "IsAnswer": false },
@@ -1312,7 +1312,7 @@
         {
             "Id": 103,
             "Name": "A user is creating a new EBS volume from an existing snapshot. The snapshot size shows 10 GB. Can the user create a volume of 30 GB from that snapshot?",
-            "Tag": "",
+            "Tag": "EBS",
             "Options": [
                 { "Id": 1055, "QuestionId": 1010, "Name": "Provided the original volume has set the change size attribute to true", "IsAnswer": false },
                 { "Id": 1056, "QuestionId": 1010, "Name": "Yes", "IsAnswer": true },
@@ -1325,7 +1325,7 @@
         {
             "Id": 104,
             "Name": "How long are the messages kept on an SQS queue by default?",
-            "Tag": "",
+            "Tag": "sqs",
             "Options": [
                 { "Id": 1055, "QuestionId": 1010, "Name": "If a message is not read, it is never deleted", "IsAnswer": false },
                 { "Id": 1056, "QuestionId": 1010, "Name": "2 weeks", "IsAnswer": false },
@@ -1338,15 +1338,14 @@
         ,
         {
             "Id": 105,
-            "Name": "",
-            "Tag": "",
+            "Name": "A user has attached an EBS volume to a running Linux instance as a '/dev/sdf' device. The user is unable to see the attached device when he runs the command 'df -h'. What is the possible reason for this?",
+            "Tag": "ebs",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "The volume is not in the same AZ of the instance", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "The volume is not formatted", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "The volume is not attached as a root device", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "The volume is not mounted", "IsAnswer": true }],
+            "Explanation": "When a user creates an EBS volume and attaches it as a device, it is required to mount the device. If the device/volume is not mounted it will not be available in the listing."
         }
 
         ,
