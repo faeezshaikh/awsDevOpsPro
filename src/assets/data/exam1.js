@@ -1365,15 +1365,14 @@
         ,
         {
             "Id": 107,
-            "Name": "",
-            "Tag": "",
+            "Name": "A user has created a new EBS volume from an existing snapshot. The user mounts the volume on the instance to which it is attached. Which of the below mentioned options is a required step before the user can mount the volume?",
+            "Tag": "EBS",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Run a cyclic check on the device for data consistency", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Create the file system of the volume", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Resize the volume as per the original snapshot size", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "No step is required. The user can directly mount the device", "IsAnswer": true }],
+            "Explanation": "When a user is trying to mount a blank EBS volume, it is required that the user first creates a file system within the volume. If the volume is created from an existing snapshot then the user needs not to create a file system on the volume as it will wipe out the existing data."
         }
 
         ,
