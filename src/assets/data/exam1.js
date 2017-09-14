@@ -1406,15 +1406,15 @@
         ,
         {
             "Id": 110,
-            "Name": "",
-            "Tag": "",
+            "Name": "You need to process long-running jobs once and only once. How might you do this?",
+            "Tag": "elastic",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Use an SNS queue and set the visibility timeout to long enough for jobs to process.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Use an SQS queue and set the reprocessing timeout to long enough for jobs to process.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Use an SQS queue and set the visibility timeout to long enough for jobs to process.", "IsAnswer": true },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Use an SNS queue and set the reprocessing timeout to long enough for jobs to process.", "IsAnswer": false }],
+            "Explanation": "The message timeout defines how long after a successful receive request SQS waits before allowing jobs to be seen by other components, and proper configuration prevents duplicate processing.",
+            "Ref": "http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/MessageLife cycle.html"
         }
 
         ,
