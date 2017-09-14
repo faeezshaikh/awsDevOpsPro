@@ -1351,15 +1351,15 @@
         ,
         {
             "Id": 106,
-            "Name": "",
+            "Name": "In DynamoDB, a secondary index is a data structure that contains a subset of attributes from a table, along with an alternate key to support ______ operations.",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "None of the above", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Both", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Query", "IsAnswer": true},
+                { "Id": 1058, "QuestionId": 1010, "Name": "Scan", "IsAnswer": false }],
+            "Explanation": "In DynamoDB, a secondary index is a data structure that contains a subset of attributes from a table, along with an alternate key to support Query operations.",
+            "Ref": "http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GSI.html"
         }
 
         ,
