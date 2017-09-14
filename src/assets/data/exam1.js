@@ -1324,15 +1324,15 @@
         ,
         {
             "Id": 104,
-            "Name": "",
+            "Name": "How long are the messages kept on an SQS queue by default?",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "If a message is not read, it is never deleted", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "2 weeks", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "1 day", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "4 days", "IsAnswer": true }],
+            "Explanation": "The SQS message retention period is configurable and can be set anywhere from 1 minute to 2 weeks. The default is 4 days and once the message retention limit is reached your messages will be automatically deleted. The option for longer message retention provides greater flexibility to allow for longer intervals between message production and consumption.",
+            "Ref": "http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-message-lifecycle.html"
         }
 
         ,
