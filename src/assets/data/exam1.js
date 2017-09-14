@@ -1286,7 +1286,7 @@
         {
             "Id": 101,
             "Name": "For AWS Auto Scaling, what is the first transition state a new instance enters after leaving steady state when scaling out due to increased load?",
-            "Tag": "",
+            "Tag": "elastic",
             "Options": [
                 { "Id": 1055, "QuestionId": 1010, "Name": "EnteringStandby", "IsAnswer": false },
                 { "Id": 1056, "QuestionId": 1010, "Name": "Pending", "IsAnswer": true },
@@ -1298,15 +1298,14 @@
         ,
         {
             "Id": 102,
-            "Name": "",
+            "Name": "When a user is detaching an EBS volume from a running instance and attaching it to a new instance, which of the below mentioned options should be followed to avoid file system damage?",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Unmount the volume first", "IsAnswer": true },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Stop all the I/O of the volume before processing", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Take a snapshot of the volume before detaching", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Force Detach the volume to ensure that all the data stays intact", "IsAnswer": false }],
+            "Explanation": "When a user is trying to detach an EBS volume, the user can either terminate the instance or explicitly remove the volume. It is a recommended practice to unmount the volume first to avoid any file system damage."
         }
 
         ,
