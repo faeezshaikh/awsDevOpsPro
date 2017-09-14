@@ -1285,15 +1285,15 @@
         ,
         {
             "Id": 101,
-            "Name": "",
+            "Name": "For AWS Auto Scaling, what is the first transition state a new instance enters after leaving steady state when scaling out due to increased load?",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "EnteringStandby", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Pending", "IsAnswer": true },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Terminating:Wait", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Detaching", "IsAnswer": false }],
+            "Explanation": "When a scale out event occurs, the Auto Scaling group launches the required number of EC2 instances, using its assigned launch configuration. These instances start in the Pending state. If you add a lifecycle hook to your Auto Scaling group, you can perform a custom action here. For more information, see Lifecycle Hooks.",
+            "Ref": "http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/AutoScalingGroupLifecycle.html"
         }
         ,
         {
