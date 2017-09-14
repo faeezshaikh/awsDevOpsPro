@@ -1378,15 +1378,15 @@
         ,
         {
             "Id": 108,
-            "Name": "",
-            "Tag": "",
+            "Name": "You need your CI to build AMIs with code pre-installed on the images on every new code push. You need to do this as cheaply as possible. How do you do this?",
+            "Tag": "CD&PA",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Bid on spot instances just above the asking price as soon as new commits come in, perform all instance configuration and setup, then create an AMI based on the spot instance.", "IsAnswer": true},
+                { "Id": 1056, "QuestionId": 1010, "Name": "Have the CI launch a new on-demand EC2 instance when new commits come in, perform all instance configuration and setup, then create an AMI based on the on-demand instance.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Purchase a Light Utilization Reserved Instance to save money on the continuous integration machine. Use these credits whenever your create AMIs on instances.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "When the CI instance receives commits, attach a new EBS volume to the CI machine. Perform all setup on this EBS volume so you don't need a new EC2 instance to create the AMI.", "IsAnswer": false }],
+            "Explanation": "Spot instances are the cheapest option, and you can use minimum run duration if your AMI takes more than a few minutes to create. Spot instances are also available to run for a predefined duration - in hourly increments up to six hours in length - at a significant discount (30-45%) compared to On-Demand pricing plus an additional 5% during off-peak times1 for a total of up to 50% savings.",
+            "Ref": "https://aws.amazon.com/ec2/spot/pricing/"
         }
 
         ,
