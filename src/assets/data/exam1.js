@@ -1493,20 +1493,20 @@
                 { "Id": 1057, "QuestionId": 1010, "Name": "UPDATE_COMPLETE", "IsAnswer": false },
                 { "Id": 1058, "QuestionId": 1010, "Name": "CREATE_COMPLETE", "IsAnswer": false }],
             "Explanation": "When a stack is in the UPDATE_ROLLBACK_FAILED state, you can continue rolling it back to return it to a working state (to UPDATE_ROLLBACK_COMPLETE). You cannot update a stack that is in the UPDATE_ROLLBACK_FAILED state. However, if you can continue to roll it back, you can return the stack to its original settings and try to update it again.",
-            "Ref": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks- continueu pdaterollback.html"
+            "Ref": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html"
         }
         ,
         {
             "Id": 117,
-            "Name": "",
+            "Name": "You need to migrate 10 million records in one hour into DynamoDB. All records are 1.5KB in size. The data is evenly distributed across the partition key. How many write capacity units should you provision during this batch load?",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "6667", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "4166", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "5556", "IsAnswer": true },
+                { "Id": 1058, "QuestionId": 1010, "Name": "2778", "IsAnswer": false }],
+            "Explanation": "You need 2 units to make a 1.5KB write, since you round up. You need 20 million total units to perform this load. You have 3600 seconds to do so. Divide and round up for 5556.",
+            "Ref": "http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ProvisionedThroughput.html"
         }
         ,
         {
