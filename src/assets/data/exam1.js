@@ -1485,15 +1485,15 @@
         ,
         {
             "Id": 116,
-            "Name": "",
+            "Name": "For AWS CloudFormation, which stack state refuses UpdateStack calls?",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "UPDATE_ROLLBACK_FAILED", "IsAnswer": true },
+                { "Id": 1056, "QuestionId": 1010, "Name": "UPDATE_ROLLBACK_COMPLETE", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "UPDATE_COMPLETE", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "CREATE_COMPLETE", "IsAnswer": false }],
+            "Explanation": "When a stack is in the UPDATE_ROLLBACK_FAILED state, you can continue rolling it back to return it to a working state (to UPDATE_ROLLBACK_COMPLETE). You cannot update a stack that is in the UPDATE_ROLLBACK_FAILED state. However, if you can continue to roll it back, you can return the stack to its original settings and try to update it again.",
+            "Ref": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks- continueu pdaterollback.html"
         }
         ,
         {
