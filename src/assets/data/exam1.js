@@ -1544,7 +1544,7 @@
                 { "Id": 1056, "QuestionId": 1010, "Name": "Region", "IsAnswer": false },
                 { "Id": 1057, "QuestionId": 1010, "Name": "Placement Group", "IsAnswer": false },
                 { "Id": 1058, "QuestionId": 1010, "Name": "Availability Zone", "IsAnswer": true }],
-            "Explanation": "Note that there is a similar question regarding scope of 'EBS snapshot'. An Amazon EBS volume is tied to its Availability Zone and can be attached only to instances in the same Availability Zone.",
+            "Explanation": "Note that there is a similar question regarding scope of 'EBS snapshot'. An Amazon EBS volume is tied to its Availability Zone and can be attached only to instances in the same Availability Zone. The scope of 'EBS snapshot' is the 'Region'",
             "Ref": "http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resources.html"
         }
 
