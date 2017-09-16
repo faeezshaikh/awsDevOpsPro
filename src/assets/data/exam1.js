@@ -1472,15 +1472,15 @@
         ,
         {
             "Id": 115,
-            "Name": "",
+            "Name": "Why are more frequent snapshots or EBS Volumes faster?",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Blocks in EBS Volumes are allocated lazily, since while logically separated from other EBS Volumes, Volumes often share the same physical hardware. Snapshotting the first time forces full block range allocation, so the second snapshot doesn't need to perform the allocation phase and is faster.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "The snapshots are incremental so that only the blocks on the device that have changed after your last snapshot are saved in the new snapshot.", "IsAnswer": true},
+                { "Id": 1057, "QuestionId": 1010, "Name": "AWS provisions more disk throughput for burst capacity during snapshots if the drive has been pre-warmed by snapshotting and reading all blocks.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "The drive is pre-warmed, so block access is more rapid for volumes when every block on the device has already been read at least one time.", "IsAnswer": false }],
+            "Explanation": "After writing data to an EBS volume, you can periodically create a snapshot of the volume to use as a baseline for new volumes or for data backup. If you make periodic snapshots of a volume, the snapshots are incremental so that only the blocks on the device that have changed after your last snapshot are saved in the new snapshot. Even though snapshots are saved incrementally, the snapshot deletion process is designed so that you need to retain only the most recent snapshot in order to restore the volume.",
+            "Ref": "http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-snapshot.html"
         }
         ,
         {
