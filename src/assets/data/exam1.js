@@ -1414,7 +1414,7 @@
                 { "Id": 1057, "QuestionId": 1010, "Name": "Use an SQS queue and set the visibility timeout to long enough for jobs to process.", "IsAnswer": true },
                 { "Id": 1058, "QuestionId": 1010, "Name": "Use an SNS queue and set the reprocessing timeout to long enough for jobs to process.", "IsAnswer": false }],
             "Explanation": "The message timeout defines how long after a successful receive request SQS waits before allowing jobs to be seen by other components, and proper configuration prevents duplicate processing.",
-            "Ref": "http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/MessageLife cycle.html"
+            "Ref": "http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/MessageLifecycle.html"
         }
 
         ,
@@ -1428,20 +1428,20 @@
                 { "Id": 1057, "QuestionId": 1010, "Name": "Alter your visibility timeout to be shorter.", "IsAnswer": false },
                 { "Id": 1058, "QuestionId": 1010, "Name": "Use 'sqsd' on your EC2 instances.", "IsAnswer": false }],
             "Explanation": "One benefit of long polling with Amazon SQS is the reduction of the number of empty responses, when there are no messages available to return, in reply to a ReceiveMessage request sent to an Amazon SQS queue. Long polling allows the Amazon SQS service to wait until a message is available in the queue before sending a response.",
-            "Ref": "http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-long- polling.html"
+            "Ref": "http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-long-polling.html"
         }
         ,
         {
             "Id": 112,
-            "Name": "",
-            "Tag": "",
+            "Name": "You need to know when you spend $1000 or more on AWS. What's the easy way for you to see that notification?",
+            "Tag": "MM&L",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "AWS CloudWatch Events tied to API calls, when certain thresholds are exceeded, publish to SNS.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Scrape the billing page periodically and pump into Kinesis.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "AWS CloudWatch Metrics + Billing Alarm + Lambda event subscription. When a threshold is exceeded, email the manager.", "IsAnswer": true},
+                { "Id": 1058, "QuestionId": 1010, "Name": "Scrape the billing page periodically and publish to SNS.", "IsAnswer": false }],
+            "Explanation": "Even if you're careful to stay within the free tier, it's a good idea to create a billing alarm to notify you if you exceed the limits of the free tier. Billing alarms can help to protect you against unknowingly accruing charges if you inadvertently use a service outside of the free tier or if traffic exceeds your expectations.",
+            "Ref": "http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/free-tier-alarms.html"
         }
         ,
         {
