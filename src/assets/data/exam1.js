@@ -1459,15 +1459,15 @@
         ,
         {
             "Id": 114,
-            "Name": "",
-            "Tag": "",
+            "Name": "Your serverless architecture using AWS API Gateway, AWS Lambda, and AWS DynamoDB experienced a large increase in traffic to a sustained 400 requests per second, and dramatically increased in failure rates. Your requests, during normal operation, last 500 milliseconds on average. Your DynamoDB table did not exceed 50% of provisioned throughput, and Table primary keys are designed correctly. What is the most likely issue?",
+            "Tag": "governance",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Your API Gateway deployment is throttling your requests.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Your AWS API Gateway Deployment is bottlenecking on request (de)serialization.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "You did not request a limit increase on concurrent Lambda function executions.", "IsAnswer": true },
+                { "Id": 1058, "QuestionId": 1010, "Name": "You used Consistent Read requests on DynamoDB and are experiencing semaphore lock.", "IsAnswer": false }],
+            "Explanation": "AWS API Gateway by default throttles at 500 requests per second steady-state, and 1000 requests per second at spike. Lambda, by default, throttles at 100 concurrent requests for safety. At 500 milliseconds (half of a second) per request, you can expect to support 200 requests per second at 100 concurrency. This is less than the 400 requests per second your system now requires. Make a limit increase request via the AWS Support Console. AWS Lambda: Concurrent requests safety throttle per account -> 100",
+            "Ref": "http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_lambda"
         }
         ,
         {
