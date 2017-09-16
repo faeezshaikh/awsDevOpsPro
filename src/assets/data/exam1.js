@@ -1420,6 +1420,123 @@
         ,
         {
             "Id": 111,
+            "Name": "You are getting a lot of empty receive requests when using Amazon SQS. This is making a lot of unnecessary network load on your instances. What can you do to reduce this load?",
+            "Tag": "SQS, SNS",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "Subscribe your queue to an SNS topic instead.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Use as long of a poll as possible, instead of short polls.", "IsAnswer": true },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Alter your visibility timeout to be shorter.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Use 'sqsd' on your EC2 instances.", "IsAnswer": false }],
+            "Explanation": "One benefit of long polling with Amazon SQS is the reduction of the number of empty responses, when there are no messages available to return, in reply to a ReceiveMessage request sent to an Amazon SQS queue. Long polling allows the Amazon SQS service to wait until a message is available in the queue before sending a response.",
+            "Ref": "http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-long- polling.html"
+        }
+        ,
+        {
+            "Id": 112,
+            "Name": "",
+            "Tag": "",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation": "",
+            "Ref": ""
+        }
+        ,
+        {
+            "Id": 113,
+            "Name": "",
+            "Tag": "",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation": "",
+            "Ref": ""
+        }
+        ,
+        {
+            "Id": 114,
+            "Name": "",
+            "Tag": "",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation": "",
+            "Ref": ""
+        }
+        ,
+        {
+            "Id": 115,
+            "Name": "",
+            "Tag": "",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation": "",
+            "Ref": ""
+        }
+        ,
+        {
+            "Id": 116,
+            "Name": "",
+            "Tag": "",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation": "",
+            "Ref": ""
+        }
+        ,
+        {
+            "Id": 117,
+            "Name": "",
+            "Tag": "",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation": "",
+            "Ref": ""
+        }
+        ,
+        {
+            "Id": 118,
+            "Name": "",
+            "Tag": "",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation": "",
+            "Ref": ""
+        }
+        ,
+        {
+            "Id": 119,
+            "Name": "",
+            "Tag": "",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+            "Explanation": "",
+            "Ref": ""
+        }
+        ,
+        {
+            "Id": 120,
             "Name": "",
             "Tag": "",
             "Options": [
