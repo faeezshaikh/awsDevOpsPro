@@ -1524,15 +1524,15 @@
         ,
         {
             "Id": 119,
-            "Name": "",
+            "Name": "Which of these is not a Pseudo Parameter in AWS CloudFormation?",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "AWS::StackName", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "AWS::AccountId", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "AWS::StackArn", "IsAnswer": true },
+                { "Id": 1058, "QuestionId": 1010, "Name": "AWS::NotificationARNs", "IsAnswer": false }],
+            "Explanation": "This is the complete list of Pseudo Parameters: AWS::AccountId, AWS::NotificationARNs, AWS::NoValue, AWS::Region, AWS::StackId, AWS::StackName",
+            "Ref": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/pseudo-parameter- reference.html"
         }
         ,
         {
