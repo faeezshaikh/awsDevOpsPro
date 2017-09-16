@@ -1446,15 +1446,15 @@
         ,
         {
             "Id": 113,
-            "Name": "",
-            "Tag": "",
+            "Name": "You need to grant a vendor access to your AWS account. They need to be able to read protected messages in a private S3 bucket at their leisure. They also use AWS. What is the best way to accomplish this?",
+            "Tag": "sec& gvo",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Create an IAM User with API Access Keys. Grant the User permissions to access the bucket. Give the vendor the AWS Access Key ID and AWS Secret Access Key for the User.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Create an EC2 Instance Profile on your account. Grant the associated IAM role full access to the bucket. Start an EC2 instance with this Profile and give SSH access to the instance to the vendor.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Create a cross-account IAM Role with permission to access the bucket, and grant permission to use the Role to the vendor AWS account.", "IsAnswer": true },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Generate a signed S3 PUT URL and a signed S3 PUT URL, both with wildcard values and 2 year durations. Pass the URLs to the vendor.", "IsAnswer": false }],
+            "Explanation": "When third parties require access to your organization's AWS resources, you can use roles to delegate access to them. For example, a third party might provide a service for managing your AWS resources. With IAM roles, you can grant these third parties access to your AWS resources without sharing your AWS security credentials. Instead, the third party can access your AWS resources by assuming a role that you create in your AWS account.",
+            "Ref": "http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_third-party.html"
         }
         ,
         {
