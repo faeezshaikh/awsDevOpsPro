@@ -1511,15 +1511,15 @@
         ,
         {
             "Id": 118,
-            "Name": "",
-            "Tag": "",
+            "Name": "Your CTO thinks your AWS account was hacked. What is the only way to know for certain if there was unauthorized access and what they did, assuming your hackers are very sophisticated AWS engineers and doing everything they can to cover their tracks?",
+            "Tag": "sec&gov",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Use CloudTrail Log File Integrity Validation.", "IsAnswer": true},
+                { "Id": 1056, "QuestionId": 1010, "Name": "Use AWS Config SNS Subscriptions and process events in real time.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Use CloudTrail backed up to AWS S3 and Glacier.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Use AWS Config Timeline forensics.", "IsAnswer": false }],
+            "Explanation": "You must use CloudTrail Log File Validation (default or custom implementation), as any other tracking method is subject to forgery in the event of a full account compromise by sophisticated enough hackers. Validated log files are invaluable in security and forensic investigations. For example, a validated log file enables you to assert positively that the log file itself has not changed, or that particular user credentials performed specific API activity. The CloudTrail log file integrity validation process also lets you know if a log file has been deleted or changed, or assert positively that no log files were delivered to your account during a given period of time.",
+            "Ref": "http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-log-file-validation-intro.html"
         }
         ,
         {
