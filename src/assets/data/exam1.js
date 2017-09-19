@@ -1603,15 +1603,15 @@
         ,
         {
             "Id": 125,
-            "Name": "",
-            "Tag": "",
+            "Name": "Your API requires the ability to stay online during AWS regional failures. Your API does not store any state, it only aggregates data from other sources - you do not have a database. What is a simple but effective way to achieve this uptime goal?",
+            "Tag": "ha",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Use a CloudFront distribution to serve up your API. Even if the region your API is in goes down, the edge locations CloudFront uses will be fine.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Use an ELB and a cross-zone ELB deployment to create redundancy across datacenters. Even if a region fails, the other AZ will stay online.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Create a Route53 Weighted Round Robin record, and if one region goes down, have that region redirect to the other region.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Create a Route53 Latency Based Routing Record with Failover and point it to two identical deployments of your stateless API in two different regions. Make sure both regions use Auto Scaling Groups behind ELBs.", "IsAnswer": true}],
+            "Explanation": "Latency Based Records allow request distribution when all is well with both regions, and the Failover component enables fallbacks between regions. By adding in the ELB and ASG, your system in the surviving region can expand to meet 100% of demand instead of the original fraction, whenever failover occurs.",
+            "Ref": "http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover.html"
         }
         ,
         {
