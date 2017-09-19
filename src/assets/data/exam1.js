@@ -1668,15 +1668,15 @@
         ,
         {
             "Id": 130,
-            "Name": "",
+            "Name": "Which of these is not a CloudFormation Helper Script?",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "cfn-signal", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "cfn-hup", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "cfn-request", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "cfn-get-metadata", "IsAnswer": false }],
+            "Explanation": "This is the complete list of CloudFormation Helper Scripts: cfn-init, cfn-signal, cfn-get-metadata, cfn-hup",
+            "Ref": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-helper-scripts- reference.html"
         }
         ,
         {
