@@ -1577,15 +1577,15 @@
         ,
         {
             "Id": 123,
-            "Name": "",
-            "Tag": "",
+            "Name": "Which of these is not an intrinsic function in AWS CloudFormation?",
+            "Tag": "CloudFormation",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Fn::Split", "IsAnswer": true },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Fn::FindInMap", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Fn::Select", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Fn::GetAZs", "IsAnswer": false }],
+            "Explanation": "This is the complete list of Intrinsic Functions...: Fn::Base64, Fn::And, Fn::Equals, Fn::If, Fn::Not, Fn::Or, Fn::FindInMap, Fn::GetAtt, Fn::GetAZs, Fn::Join, Fn::Select, Ref",
+            "Ref": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function- reference.html"
         }
         ,
         {
