@@ -1551,15 +1551,15 @@
         ,
         {
             "Id": 121,
-            "Name": "",
-            "Tag": "",
+            "Name": "You are experiencing performance issues writing to a DynamoDB table. Your system tracks high scores for video games on a marketplace. Your most popular game experiences all of the performance issues. What is the most likely problem?",
+            "Tag": "MM&L",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "DynamoDB's vector clock is out of sync, because of the rapid growth in request for the most popular game.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "You selected the Game ID or equivalent identifier as the primary partition key for the table.", "IsAnswer": true},
+                { "Id": 1057, "QuestionId": 1010, "Name": "Users of the most popular video game each perform more read and write requests than average.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "You did not provision enough read or write throughput to the table.", "IsAnswer": false }],
+            "Explanation": "The primary key selection dramatically affects performance consistency when reading or writing to DynamoDB. By selecting a key that is tied to the identity of the game, you forced DynamoDB to create a hotspot in the table partitions, and over-request against the primary key partition for the popular game. When it stores data, DynamoDB divides a table's items into multiple partitions, and distributes the data primarily based upon the partition key value. The provisioned throughput associated with a table is also divided evenly among the partitions, with no sharing of provisioned throughput across partitions.",
+            "Ref": "http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GuidelinesForTables.html#"
         }
         ,
         {
