@@ -1616,15 +1616,15 @@
         ,
         {
             "Id": 126,
-            "Name": "",
-            "Tag": "",
+            "Name": "You are designing an enterprise data storage system. Your data management software system requires mountable disks and a real filesystem, so you cannot use S3 for storage. You need persistence, so you will be using AWS EBS Volumes for your system. The system needs as low- cost storage as possible, and access is not frequent or high throughput, and is mostly sequential reads. Which is the most appropriate EBS Volume Type for this scenario?",
+            "Tag": "governance",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "gp1", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "io1", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "standard", "IsAnswer": true },
+                { "Id": 1058, "QuestionId": 1010, "Name": "gp2", "IsAnswer": false }],
+            "Explanation": "Standard volumes, or Magnetic volumes, are best for: Cold workloads where data is infrequently accessed, or scenarios where the lowest storage cost is important.",
+            "Ref": "http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html"
         }
         ,
         {
