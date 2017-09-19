@@ -1655,15 +1655,15 @@
         ,
         {
             "Id": 129,
-            "Name": "",
-            "Tag": "",
+            "Name": "When thinking of AWS OpsWorks, which of the following is not an instance type you can allocate in a stack layer?",
+            "Tag": "MM&L",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "24/7 instances", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Spot instances", "IsAnswer": true },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Time-based instances", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Load-based instances", "IsAnswer": false }],
+            "Explanation": "AWS OpsWorks supports the following instance types, which are characterized by how they are started and stopped. 24/7 instances are started manually and run until you stop them.Time-based instances are run by AWS OpsWorks on a specified daily and weekly schedule. They allow your stack to automatically adjust the number of instances to accommodate predictable usage patterns. Load-based instances are automatically started and stopped by AWS OpsWorks, based on specified load metrics, such as CPU utilization. They allow your stack to automatically adjust the number of instances to accommodate variations in incoming traffic. Load-based instances are available only for Linux-based stacks.",
+            "Ref": "http://docs.aws.amazon.com/opsworks/latest/userguide/welcome.html"
         }
         ,
         {
