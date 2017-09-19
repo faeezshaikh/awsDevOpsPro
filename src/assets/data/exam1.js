@@ -1590,15 +1590,15 @@
         ,
         {
             "Id": 124,
-            "Name": "",
+            "Name": "For AWS CloudFormation, which is true?",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Custom resources using SNS have a default timeout of 3 minutes.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Custom resources using SNS do not need a 'ServiceToken' property.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Custom resources using Lambda and 'ZipFile' allow inline nodejs resource composition.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Custom resources using Lambda do not need a 'ServiceToken' property", "IsAnswer": false }],
+            "Explanation": "Code is a property of the AWS::Lambda::Function resource that enables you to specify the source code of an AWS Lambda (Lambda) function. You can point to a file in an Amazon Simple Storage Service (Amazon S3) bucket or specify your source code as inline text (for nodejs runtime environments only).",
+            "Ref": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html"
         }
         ,
         {
