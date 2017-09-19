@@ -1564,15 +1564,15 @@
         ,
         {
             "Id": 122,
-            "Name": "",
-            "Tag": "",
+            "Name": "You meet once per month with your operations team to review the past month's data. During the meeting, you realize that 3 weeks ago, your monitoring system which pings over HTTP from outside AWS recorded a large spike in latency on your 3-tier web service API. You use DynamoDB for the database layer, ELB, EBS, and EC2 for the business logic tier, and SQS, ELB, and EC2 for the presentation layer. Which of the following techniques will NOT help you figure out what happened?",
+            "Tag": "MM&L",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Check your CloudTrail log history around the spike's time for any API calls that caused slowness.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Review CloudWatch Metrics graphs to determine which component(s) slowed the system down.", "IsAnswer": true},
+                { "Id": 1057, "QuestionId": 1010, "Name": "Review your ELB access logs in S3 to see if any ELBs in your system saw the latency.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Analyze your logs to detect bursts in traffic at that time.", "IsAnswer": false }],
+            "Explanation": "Metrics data are available for 2 weeks. If you want to store metrics data beyond that duration, you can retrieve it using our GetMetricStatistics API as well as a number of applications and tools offered by AWS partners.",
+            "Ref": "https://aws.amazon.com/cloudwatch/faqs/"
         }
         ,
         {
