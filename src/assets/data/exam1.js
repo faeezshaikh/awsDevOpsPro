@@ -1687,9 +1687,9 @@
                 { "Id": 1055, "QuestionId": 1010, "Name": "Use the AWS CloudFormation 'ValidateTemplate' call before publishing changes to AWS.", "IsAnswer": false },
                 { "Id": 1056, "QuestionId": 1010, "Name": "Model your stack in one template, so you can leverage CloudFormation's state management and dependency resolution to propagate all changes.", "IsAnswer": true},
                 { "Id": 1057, "QuestionId": 1010, "Name": "Use CloudFormation to create brand new infrastructure for all stateless resources on each push, and run integration tests on that set of infrastructure.", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1058, "QuestionId": 1010, "Name": "Parametrize the template and use 'Mappings' to ensure your template works in multiple Regions.", "IsAnswer": false }],
+            "Explanation": "Putting all resources in one stack is a bad idea, since different tiers have different life cycles and frequencies of change. For additional guidance about organizing your stacks, you can use two common frameworks: a multi-layered architecture and service-oriented architecture (SOA).",
+            "Ref": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#organizingstacks"
         }
         ,
         {
