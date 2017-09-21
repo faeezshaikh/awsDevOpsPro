@@ -1685,7 +1685,7 @@
             "Tag": "",
             "Options": [
                 { "Id": 1055, "QuestionId": 1010, "Name": "Use the AWS CloudFormation 'ValidateTemplate' call before publishing changes to AWS.", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Model your stack in one template, so you can leverage CloudFormation's state management and dependency resolution to propagate all changes.", "IsAnswer": true},
                 { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
                 { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
             "Explanation": "",
