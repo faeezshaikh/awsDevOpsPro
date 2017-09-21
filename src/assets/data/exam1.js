@@ -1684,7 +1684,7 @@
             "Name": "Your team wants to begin practicing continuous delivery using CloudFormation, to enable automated builds and deploys of whole, versioned stacks or stack layers. You have a 3-tier, mission-critical system. Which of the following is NOT a best practice for using CloudFormation in a continuous delivery environment?",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+                { "Id": 1055, "QuestionId": 1010, "Name": "Use the AWS CloudFormation 'ValidateTemplate' call before publishing changes to AWS.", "IsAnswer": false },
                 { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
                 { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
                 { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
