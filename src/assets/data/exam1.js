@@ -1681,7 +1681,7 @@
         ,
         {
             "Id": 131,
-            "Name": "",
+            "Name": "Your team wants to begin practicing continuous delivery using CloudFormation, to enable automated builds and deploys of whole, versioned stacks or stack layers. You have a 3-tier, mission-critical system. Which of the following is NOT a best practice for using CloudFormation in a continuous delivery environment?",
             "Tag": "",
             "Options": [
                 { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
