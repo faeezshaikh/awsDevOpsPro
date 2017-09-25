@@ -58,24 +58,36 @@
     ,
     {
         "Id": 5,
-        "Name": "", 
+        "Name": "You've been asked to retrofit an existing application to make use of elastic beanstalk. The application is written in a language and uses frameworks not natively supported by Elastic Beanstalk AND uses a VERY specific set of dependency versions how can you accomplish the deployment using AWS tools and services. Pick the correct answer", 
         "Tag":"",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": true},
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-        "Explanation":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "Use OPSWorks and the custom layer type to deploy an elastic beanstalk environment using the specific set of dependencies required. Use the layer options to deploy the custom language runtimes", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Manually build an elastic beanstalk environment starting with the base EC2 instance and using CloudFormation add the EB build components to support the application", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Use CloudFormation to deploy a custom elastic beanstalk environment, using bootstrapping to add the specific dependencies and runtime required to support your application", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Produce a docker container containing your application, all requirements and specific dependency versions. Upload to a private docker registry and use elastic beanstalk to deploy the docker container", "IsAnswer": false }],
+        "Explanation":"If you dockerize your application you are bundling all dependencies together and making it portable. This way your app is guaranteed to run on any platform as long as it supports Docker"
     } 
     ,
     {
         "Id": 6,
+        "Name": "Which of the following apply to OpsWork Instance Auto Healing?", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "If an instance is terminated outside of OPSWorks control, it is recreated using the OS image it was using at the time of termination", "IsAnswer": true},
+            { "Id": 1056, "QuestionId": 1010, "Name": "If an application running on an instance fails, auto healing will recreate the instance and re-deploy the failed application, running a configuration life cycle event on all the layers instances", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "If an instance is terminated outside of OPSWorks control, it is recreated using the OS image specified within the stack configuration at the time of termination", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "If an EBS backed instance fails a status check, its restarted", "IsAnswer": true }],
+        "Explanation":""
+    } 
+    ,
+    {
+        "Id": 3,
         "Name": "", 
         "Tag":"",
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
             { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": true},
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false},
             { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
         "Explanation":""
     } 
@@ -87,7 +99,7 @@
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
             { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": true},
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false},
             { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
         "Explanation":""
     } 
@@ -99,7 +111,7 @@
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
             { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": true},
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false},
             { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
         "Explanation":""
     } 
@@ -111,19 +123,7 @@
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
             { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": true},
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-        "Explanation":""
-    } 
-    ,
-    {
-        "Id": 3,
-        "Name": "", 
-        "Tag":"",
-        "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": true},
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false},
             { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
         "Explanation":""
     } 
