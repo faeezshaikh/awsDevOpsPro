@@ -35,14 +35,29 @@
         "Tag":"",
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "16 - All instance in the stack except the instance being added.", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "17 - the instance being added to the layer, the remaining instances in that layer, and all other instances in the stack.", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "1 - the instance being added to the layer.", "IsAnswer": true},
+            { "Id": 1056, "QuestionId": 1010, "Name": "17 - the instance being added to the layer, the remaining instances in that layer, and all other instances in the stack.", "IsAnswer": true },
+            { "Id": 1057, "QuestionId": 1010, "Name": "1 - the instance being added to the layer.", "IsAnswer": false},
             { "Id": 1058, "QuestionId": 1010, "Name": "5 - the instance being added to the layer AND the remaining instances in that layer.", "IsAnswer": false }],
         "Explanation":"If an instance enters or leaves an online state - i.e like it does when being created/added to a stack the configure lifecycle event is run on ALL instance in the stack including itself."
     } 
     ,
     {
         "Id": 4,
+        "Name": "You've been tasked with creating a 1-click, unattended CloudFormation template which can deploy an application and associated infrastructure within an AWS Region, without asking for parameters, The Template should be able to be applied via the console or programmatically as part of an automated provisioning system. In order to fit into the organisations DEVOPS system, the template should be equally capable or being applied once, ten times, or 100+ times in multiple regions world wide. Each of your VPCs will be connected in a hub and spoke architecture with your head office data center. Management have asked that you design your CloudFormation template so that it can be applied to any region and will create infrastructure as appropriate for the above requirements. Select all appropriate answers below which will form part of your solution. The solution should minimise the amount of infrastructure required to support the auto-provisioning activitiesc (Choose 3)", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "A lambda-backed custom resource together with a lambda function that consults a DynamoDB or RDS database containing configuration management information.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "DynamoDB - holding a database of used IP addresses from a worldwide IP plan.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "A CloudFormation template containing resources to provision for the application, omitting resource names allowing CloudFormation to select semi-random values. Use pseudo-parameters where appropriate.", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Simple workflow service, orchestrating the creation of the resources and auto selecting an IP range for the subnets in each VPC, allowing VPN Hub and Spoke Connectivity.", "IsAnswer": false },
+            { "Id": 1059, "QuestionId": 1010, "Name": "A custom resource backed by SQS, and a set of EC2 worker instances checking a configuration management database containing infrastructure configuration information.", "IsAnswer": false },
+            { "Id": 1060, "QuestionId": 1010, "Name": "MySQL RDS - holding a database of used IP addresses from a worldwide IP plan.", "IsAnswer": false },
+            { "Id": 1061, "QuestionId": 1010, "Name": "A CloudFormation template containing resources to provision for the application, containing resource names where appropriate within the template to confirm to the organization's resource-naming scheme.", "IsAnswer": false }],
+        "Explanation":""
+    } 
+    ,
+    {
+        "Id": 5,
         "Name": "", 
         "Tag":"",
         "Options": [
@@ -54,19 +69,7 @@
     } 
     ,
     {
-        "Id": 3,
-        "Name": "", 
-        "Tag":"",
-        "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": true},
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-        "Explanation":""
-    } 
-    ,
-    {
-        "Id": 3,
+        "Id": 6,
         "Name": "", 
         "Tag":"",
         "Options": [
