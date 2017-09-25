@@ -8,7 +8,7 @@
       {
         "Id": 1,
         "Name": "Which of the following are valid types of custom resource backing in Cloud Formation (Choose 2)", 
-        "Tag":"",
+        "Tag":"cd&pa",
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "SQS - Simple Queue Service - allowing a fleet of EC2 instances to service requests from a custom resource.", "IsAnswer": false },
             { "Id": 1056, "QuestionId": 1010, "Name": "Lambda - Lambda backed custom resources allow event driven compute in response to stack creation, deletion and updates", "IsAnswer": true },
@@ -20,7 +20,7 @@
     {
         "Id": 2,
         "Name": "You've been tasked to produce cloud formation templates for a business application. The application has 3 development stages, dev, stage and prod which use different types and sizes of infrastructure. Additionally you need to deploy the application to three regions, each of which requires different AMI's for servers and may have alternative numbers of Availability zones. What is the minimum number of templates required to achieve this business objective.", 
-        "Tag":"",
+        "Tag":"cd&pa",
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "3 Templates - One for each development stage, but using a combination of mappings and pseudo-parameters to allow regions portability.", "IsAnswer": false },
             { "Id": 1056, "QuestionId": 1010, "Name": "9 Templates - One for each development stage containing the required resource types and sizes (Total 3, dev, stage, prod), and for each of those sets, 1 per region each with unique AMI's and availability zone ID's", "IsAnswer": false },
@@ -32,7 +32,7 @@
     {
         "Id": 3,
         "Name": "You have an OPSWorks stack consisting of 4 layers for a multi tier application. Each layer contains 4 instances for a total of 16. You add another instance to Layer 1. How many instances will the configure recipe run on.", 
-        "Tag":"",
+        "Tag":"cd&pa",
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "16 - All instance in the stack except the instance being added.", "IsAnswer": false },
             { "Id": 1056, "QuestionId": 1010, "Name": "17 - the instance being added to the layer, the remaining instances in that layer, and all other instances in the stack.", "IsAnswer": true },
@@ -59,7 +59,7 @@
     {
         "Id": 5,
         "Name": "You've been asked to retrofit an existing application to make use of elastic beanstalk. The application is written in a language and uses frameworks not natively supported by Elastic Beanstalk AND uses a VERY specific set of dependency versions how can you accomplish the deployment using AWS tools and services. Pick the correct answer", 
-        "Tag":"",
+        "Tag":"cd&pa",
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "Use OPSWorks and the custom layer type to deploy an elastic beanstalk environment using the specific set of dependencies required. Use the layer options to deploy the custom language runtimes", "IsAnswer": false },
             { "Id": 1056, "QuestionId": 1010, "Name": "Manually build an elastic beanstalk environment starting with the base EC2 instance and using CloudFormation add the EB build components to support the application", "IsAnswer": false },
@@ -71,7 +71,7 @@
     {
         "Id": 6,
         "Name": "Which of the following apply to OpsWork Instance Auto Healing?", 
-        "Tag":"",
+        "Tag":"cd&pa",
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "If an instance is terminated outside of OPSWorks control, it is recreated using the OS image it was using at the time of termination", "IsAnswer": true},
             { "Id": 1056, "QuestionId": 1010, "Name": "If an application running on an instance fails, auto healing will recreate the instance and re-deploy the failed application, running a configuration life cycle event on all the layers instances", "IsAnswer": false },
