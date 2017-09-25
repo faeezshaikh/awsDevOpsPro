@@ -1730,15 +1730,15 @@
         } ,
         {
             "Id": 135,
-            "Name": "",
-            "Tag": "",
+            "Name": "What is the scope of AWS IAM?",
+            "Tag": "IAM",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Global", "IsAnswer": true },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Availability Zone", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Region", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Placement Group", "IsAnswer": false }],
+            "Explanation": "IAM resources are all global; there is not regional constraint.",
+            "Ref": "https://aws.amazon.com/iam/faqs/"
         } ,
         {
             "Id": 136,
