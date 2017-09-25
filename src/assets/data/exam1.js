@@ -1766,15 +1766,15 @@
         } ,
         {
             "Id": 138,
-            "Name": "",
+            "Name": "What is the order of most-to-least rapidly-scaling (fastest to scale first)? a) EC2 + ELB + Auto Scaling b) Lambda c) RDS",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "B, A, C", "IsAnswer": true },
+                { "Id": 1056, "QuestionId": 1010, "Name": "C, B, A", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "C, A, B", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "A, C, B", "IsAnswer": false }],
+            "Explanation": "Lambda is designed to scale instantly. EC2 + ELB + Auto Scaling require single-digit minutes to scale out. RDS will take at least 15 minutes, and will apply OS patches or any other updates when applied.",
+            "Ref": "https://aws.amazon.com/lambda/faqs/"
         } ,
         {
             "Id": 139,
