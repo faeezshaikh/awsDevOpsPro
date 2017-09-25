@@ -1778,15 +1778,15 @@
         } ,
         {
             "Id": 139,
-            "Name": "",
+            "Name": "Which is not a restriction on AWS EBS Snapshots?",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Snapshots which are shared cannot be used as a basis for other snapshots.", "IsAnswer": true },
+                { "Id": 1056, "QuestionId": 1010, "Name": "You cannot share a snapshot containing an AWS Access Key ID or AWS Secret Access Key.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "You cannot share unencrypted snapshots.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Snapshot restorations are restricted to the region in which the snapshots are created.", "IsAnswer": false }],
+            "Explanation": "Snapshots shared with other users are usable in full by the recipient, including but limited to the ability to base modified volumes and snapshots.",
+            "Ref": "http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-modifying-snapshot- permissions.html"
         } ,
         {
             "Id": 140,
