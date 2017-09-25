@@ -159,14 +159,13 @@
     } ,
     {
         "Id": 13,
-        "Name": "", 
+        "Name": "The three main features of CloudWatch Logs are: (Choose 3)", 
         "Tag":"mm&l",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false},
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-        "Explanation":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "Automatically transfer CloudWatch alarm logs to S3", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Archive log data", "IsAnswer": true },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Monitor AWS CloudTrail logged events", "IsAnswer": true},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Monitor Logs fom EC2 instances in realtime", "IsAnswer": true }]
     } ,
     {
         "Id": 14,
