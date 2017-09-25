@@ -1694,15 +1694,15 @@
         ,
         {
             "Id": 132,
-            "Name": "",
-            "Tag": "",
+            "Name": "You need to replicate API calls across two systems in real time. What tool should you use as a buffer and transport mechanism for API call events?",
+            "Tag": "Kinesis",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "AWS SQS", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "AWS Lambda", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "AWS Kinesis", "IsAnswer": true },
+                { "Id": 1058, "QuestionId": 1010, "Name": "AWS SNS", "IsAnswer": false }],
+            "Explanation": "AWS Kinesis is an event stream service. Streams can act as buffers and transport across systems for in-order programmatic events, making it ideal for replicating API calls across systems. A typical Amazon Kinesis Streams application reads data from an Amazon Kinesis stream as data records. These applications can use the Amazon Kinesis Client Library, and they can run on Amazon EC2 instances. The processed records can be sent to dashboards, used to generate alerts, dynamically change pricing and advertising strategies, or send data to a variety of other AWS services. For information about Streams features and pricing, see Amazon Kinesis Streams.",
+            "Ref": "http://docs.aws.amazon.com/kinesis/latest/dev/introduction.html"
         } ,
         {
             "Id": 133,
