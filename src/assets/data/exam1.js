@@ -1706,15 +1706,15 @@
         } ,
         {
             "Id": 133,
-            "Name": "",
-            "Tag": "",
+            "Name": "You are building a Ruby on Rails application for internal, non-production use which uses MySQL as a database. You want developers without very much AWS experience to be able to deploy new code with a single command line push. You also want to set this up as simply as possible. Which tool is ideal for this setup?",
+            "Tag": "cd,pa",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "AWS CloudFormation", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "AWS OpsWorks", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "AWS ELB + EC2 with CLI Push", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "AWS Elastic Beanstalk", "IsAnswer": true}],
+            "Explanation": "Elastic Beanstalk's primary mode of operation exactly supports this use case out of the box. It is simpler than all the other options for this question. With Elastic Beanstalk, you can quickly deploy and manage applications in the AWS cloud without worrying about the infrastructure that runs those applications. AWS Elastic Beanstalk reduces management complexity without restricting choice or control. You simply upload your application, and Elastic Beanstalk automatically handles the details of capacity provisioning, load balancing, scaling, and application health monitoring.",
+            "Ref": "http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_Ruby_rails.html"
         } ,
         {
             "Id": 134,
