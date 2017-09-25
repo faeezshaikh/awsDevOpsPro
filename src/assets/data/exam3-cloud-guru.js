@@ -85,11 +85,12 @@
         "Name": "Which of the following best describes 'CloudWatch Events'?", 
         "Tag":"mm&l",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false},
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-        "Explanation":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "A real-time stream of events", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "A faster version of CloudTrail", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "The Central Nervous System of AWS", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "All of the other options", "IsAnswer": true }],
+        "Explanation":"Amazon describe CloudWatch events as all of the above. See link for further details",
+        "Ref":"https://aws.amazon.com/blogs/aws/new-cloudwatch-events-track-and-respond-to-changes-to-your-aws-resources/"
     } 
     ,
     {
