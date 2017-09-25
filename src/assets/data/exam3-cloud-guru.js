@@ -101,21 +101,22 @@
             { "Id": 1055, "QuestionId": 1010, "Name": "A service used to store log files", "IsAnswer": false },
             { "Id": 1056, "QuestionId": 1010, "Name": "A list of metric names", "IsAnswer": false },
             { "Id": 1057, "QuestionId": 1010, "Name": "A name/value pair that helps you to uniquely identify a metric", "IsAnswer": false},
-            { "Id": 1058, "QuestionId": 1010, "Name": "A container of metrics", "IsAnswer": false }],
+            { "Id": 1058, "QuestionId": 1010, "Name": "A container of metrics", "IsAnswer": true }],
         "Explanation":"Namespaces are containers for metrics. Metrics are isolated from one another in different namespaces so that metrics from different applications are not mistakenly aggregated into the same statistics Further information: ",
         "Ref":"https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CW_Support_For_AWS.html"
     } 
     ,
     {
         "Id": 9,
-        "Name": "", 
+        "Name": "Which of the following best describes 'CloudWatch Logs?'", 
         "Tag":"mm&l",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false},
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-        "Explanation":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "A history of CloudWatch alarm state changes", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "A service that converts CloudWatch metrics into log files for processing", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "A service to store system, application and custom logs", "IsAnswer": true},
+            { "Id": 1058, "QuestionId": 1010, "Name": "All of the other options", "IsAnswer": false }],
+        "Explanation":"You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon Elastic Compute Cloud (Amazon EC2) instances, AWS CloudTrail, or other sources. Further information: ",
+        "Ref":"https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html"
     } 
     ,
     {
