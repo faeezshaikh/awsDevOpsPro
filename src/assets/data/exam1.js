@@ -1754,15 +1754,15 @@
         } ,
         {
             "Id": 137,
-            "Name": "",
+            "Name": "Your CTO has asked you to make sure that you know what all users of your AWS account are doing to change resources at all times. She wants a report of who is doing what over time, reported to her once per week, for as broad a resource type group as possible. How should you do this?",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Create a global AWS CloudTrail Trail. Configure a script to aggregate the log data delivered to S3 once per week and deliver this to the CTO.", "IsAnswer": true},
+                { "Id": 1056, "QuestionId": 1010, "Name": "Use CloudWatch Events Rules with an SNS topic subscribed to all AWS API calls. Subscribe the CTO to an email type delivery on this SNS Topic.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Use AWS IAM credential reports to deliver a CSV of all uses of IAM User Tokens over time to the CTO.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Use AWS Config with an SNS subscription on a Lambda, and insert these changes over time into a DynamoDB table. Generate reports based on the contents of this table.", "IsAnswer": false }],
+            "Explanation": "This is the ideal use case for AWS CloudTrail. CloudTrail provides visibility into user activity by recording API calls made on your account. CloudTrail records important information about each API call, including the name of the API, the identity of the caller, the time of the API call, the request parameters, and the response elements returned by the AWS service. This information helps you to track changes made to your AWS resources and to troubleshoot operational issues. CloudTrail makes it easier to ensure compliance with internal policies and regulatory standards.",
+            "Ref": "https://aws.amazon.com/cloudtrail/faqs/"
         } ,
         {
             "Id": 138,
