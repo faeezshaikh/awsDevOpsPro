@@ -241,16 +241,15 @@
     ,
     {
         "Id": 20,
-        "Name": "", 
+        "Name": "What best describes an 'Auto Scaling Group?'", 
         "Tag":"ha, elasticity",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false},
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-        "Explanation":"",
-        "Ref":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "A collection of launch configurations", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "A collection of Elastic Load Balancers in the same Region or Availability Zone", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "A collection of EC2 instances treated as a logical group", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "A collection of CloudFront edge servers", "IsAnswer": false }],
+        "Explanation":"An Auto Scaling group contains a collection of EC2 instances that share similar characteristics and are treated as a logical grouping for the purposes of instance scaling and management. ",
+        "Ref":"https://docs.aws.amazon.com/autoscaling/latest/userguide/AutoScalingGroup.html"
     }  ,
     {
         "Id": 21,
