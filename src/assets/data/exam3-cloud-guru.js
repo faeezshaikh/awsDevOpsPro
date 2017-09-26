@@ -265,16 +265,17 @@
     }  ,
     {
         "Id": 22,
-        "Name": "", 
+        "Name": "What does a Launch Configuration define?", 
         "Tag":"ha, elasticity",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false},
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-        "Explanation":"",
-        "Ref":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "AMI ID", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Key Pair", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Security groups", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Instance Type", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "All of the other options", "IsAnswer": true },
+            { "Id": 1059, "QuestionId": 1010, "Name": "None of the other options", "IsAnswer": false }],
+        "Explanation":"Launch configurations define all of the above. ",
+        "Ref":"https://docs.aws.amazon.com/autoscaling/latest/userguide/LaunchConfiguration.html"
     }  ,
     {
         "Id": 23,
