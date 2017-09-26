@@ -279,16 +279,14 @@
     }  ,
     {
         "Id": 23,
-        "Name": "", 
+        "Name": "What is Auto Scaling Self Healing good for? (choose 2) ", 
         "Tag":"ha, elasticity",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false},
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-        "Explanation":"",
-        "Ref":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "Killing servers which aren't required to keep costs down.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Keeping servers highly available", "IsAnswer": true },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Ensuring autoscaling groups scale correctly", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Creating self-healing, immutable infrastructure.", "IsAnswer": true }],
+        "Explanation":"Auto scaling self healing is a concept where we can use auto scaling groups to create low cost, self healing immutable infrastructure without having to install or configure additional software to keep your servers highly available without any user interaction."
     }  ,
     {
         "Id": 24,
