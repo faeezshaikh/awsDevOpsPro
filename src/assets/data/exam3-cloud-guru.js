@@ -349,15 +349,14 @@
     }  ,
     {
         "Id": 29,
-        "Name": "", 
+        "Name": "What is Kinesis Streams used for?", 
         "Tag":"ha, elasticity",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false},
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-        "Explanation":"",
+            { "Id": 1055, "QuestionId": 1010, "Name": "To run standard SQL queries against streaming data", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "To connect EC2 instances to CloudWatch", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "To process and analyze large streams of data records in real time", "IsAnswer": true},
+            { "Id": 1058, "QuestionId": 1010, "Name": "To load streaming data from hundreds and thousands of sources into Amazon S3 and Amazon Redshift", "IsAnswer": false }],
+        "Explanation":"Amazon Kinesis Streams enables you to build custom applications that process or analyze streaming data for specialized needs.",
         "Ref":""
     }  ,
     {
