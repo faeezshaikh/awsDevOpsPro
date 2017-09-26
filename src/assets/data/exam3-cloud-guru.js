@@ -246,23 +246,22 @@
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "A collection of launch configurations", "IsAnswer": false },
             { "Id": 1056, "QuestionId": 1010, "Name": "A collection of Elastic Load Balancers in the same Region or Availability Zone", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "A collection of EC2 instances treated as a logical group", "IsAnswer": false},
+            { "Id": 1057, "QuestionId": 1010, "Name": "A collection of EC2 instances treated as a logical group", "IsAnswer": true},
             { "Id": 1058, "QuestionId": 1010, "Name": "A collection of CloudFront edge servers", "IsAnswer": false }],
-        "Explanation":"An Auto Scaling group contains a collection of EC2 instances that share similar characteristics and are treated as a logical grouping for the purposes of instance scaling and management. ",
+        "Explanation":"An Auto Scaling group contains a collection of EC2 instances that share similar characteristics and are treated as a logical grouping for the purposes of instance scaling and management.",
         "Ref":"https://docs.aws.amazon.com/autoscaling/latest/userguide/AutoScalingGroup.html"
     }  ,
     {
         "Id": 21,
-        "Name": "", 
+        "Name": "What kind of read replicas can Amazon Aurora use? (Choose 2)", 
         "Tag":"ha, elasticity",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false},
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-        "Explanation":"",
-        "Ref":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "MySQL Read Replicas", "IsAnswer": true },
+            { "Id": 1056, "QuestionId": 1010, "Name": "PostgreSQL Read Replicas", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Oracle Read Replicas", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Amazon Aurora Replicas", "IsAnswer": true }],
+        "Explanation":"Amazon Aurora can use MySQL and Aurora replicas.",
+        "Ref":"https://aws.amazon.com/rds/aurora/faqs/#high-availability-and-replication"
     }  ,
     {
         "Id": 22,
