@@ -290,16 +290,15 @@
     }  ,
     {
         "Id": 24,
-        "Name": "", 
+        "Name": "What is Kinesis Firehose used for?", 
         "Tag":"ha, elasticity",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false},
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-        "Explanation":"",
-        "Ref":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "To process and analyze large streams of data records in real time", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "To run standard SQL queries against streaming data", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "To load streaming data from hundreds and thousands of sources into Amazon S3 and Amazon Redshift", "IsAnswer": true},
+            { "Id": 1058, "QuestionId": 1010, "Name": "To connect EC2 instances to CloudWatch", "IsAnswer": false }],
+        "Explanation":"Amazon Kinesis Firehose is the easiest way to load streaming data into AWS. It can capture and automatically load streaming data into Amazon S3 and Amazon Redshift, enabling near real-time analytics with existing business intelligence tools and dashboard.",
+        "Ref":"https://aws.amazon.com/kinesis/firehose/"
     }  ,
     {
         "Id": 25,
