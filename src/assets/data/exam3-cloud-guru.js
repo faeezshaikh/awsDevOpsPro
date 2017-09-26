@@ -315,16 +315,15 @@
     }  ,
     {
         "Id": 26,
-        "Name": "", 
+        "Name": "Which of the following are the three Amazon Kinesis services?", 
         "Tag":"ha, elasticity",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false},
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-        "Explanation":"",
-        "Ref":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "Kinesis Streams, Kinesis Analytics and Kinesis Firehose", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Kinesis Waterfalls, Kinesis Logs and Kinesis Firehose", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Kinesis Waterfalls, Kinesis Logs and Kinesis Fireman", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Kinesis Streams, Kinesis Analytics and Kinesis Fireman", "IsAnswer": false }],
+        "Explanation":"Kinesis contains 3 separate services, Kinesis Streams, Kinesis Analytics and Kinesis Firehose.",
+        "Ref":"https://aws.amazon.com/kinesis/"
     }  ,
     {
         "Id": 27,
