@@ -233,10 +233,24 @@
             { "Id": 1055, "QuestionId": 1010, "Name": "SWF", "IsAnswer": false },
             { "Id": 1056, "QuestionId": 1010, "Name": "SES", "IsAnswer": false },
             { "Id": 1057, "QuestionId": 1010, "Name": "SQS", "IsAnswer": false},
-            { "Id": 1058, "QuestionId": 1010, "Name": "AutoScaling", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "SNS", "IsAnswer": false }],
+            { "Id": 1058, "QuestionId": 1010, "Name": "AutoScaling", "IsAnswer": true },
+            { "Id": 1058, "QuestionId": 1010, "Name": "SNS", "IsAnswer": true }],
         "Explanation":"The CloudWatch alarm action is a notification sent to an Amazon Simple Notification Service topic or Auto Scaling policy.",
         "Ref":"http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ConsoleAlarms.html"
+    } 
+    ,
+    {
+        "Id": 20,
+        "Name": "", 
+        "Tag":"",
+        "Options": [
+            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false },
+            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
+        "Explanation":"",
+        "Ref":""
     } 
  
     ]
