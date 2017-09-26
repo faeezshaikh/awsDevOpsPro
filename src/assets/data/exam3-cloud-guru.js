@@ -361,69 +361,16 @@
     }  ,
     {
         "Id": 30,
-        "Name": "", 
+        "Name": "Which of the following are not true?", 
         "Tag":"ha, elasticity",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false},
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-        "Explanation":"",
-        "Ref":""
-    }  ,
-    {
-        "Id": 31,
-        "Name": "", 
-        "Tag":"ha, elasticity",
-        "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false},
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-        "Explanation":"",
-        "Ref":""
-    }  ,
-    {
-        "Id": 32,
-        "Name": "", 
-        "Tag":"ha, elasticity",
-        "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false},
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-        "Explanation":"",
-        "Ref":""
-    }  ,
-    {
-        "Id": 33,
-        "Name": "", 
-        "Tag":"ha, elasticity",
-        "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false},
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-        "Explanation":"",
-        "Ref":""
-    }  ,
-    {
-        "Id": 34,
-        "Name": "", 
-        "Tag":"ha, elasticity",
-        "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false},
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-        "Explanation":"",
-        "Ref":""
-    } 
+            { "Id": 1055, "QuestionId": 1010, "Name": "You can not use lifecyle hooks with spot instances", "IsAnswer": true },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Autoscaling Lifecycle hooks allow you to perform custom actions as AutoScaling launches or terminates instances", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "The maximum amount of time you can keep your server in a wait state is 48 hours", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "The conclusion of a lifecycle hook has two states: ABANDON or CONTINUE", "IsAnswer": false }],
+        "Explanation":"You can use lifecycle hooks with spot instances.",
+        "Ref":"https://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html"
+    }  
  
     ]
 }
