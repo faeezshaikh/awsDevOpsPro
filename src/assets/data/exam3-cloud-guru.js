@@ -327,16 +327,15 @@
     }  ,
     {
         "Id": 27,
-        "Name": "", 
+        "Name": "When does the Auto Scaling Lifecycle start?", 
         "Tag":"ha, elasticity",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false},
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-        "Explanation":"",
-        "Ref":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "When the Auto Scaling Group takes an instance out of service and terminates the instance.", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "When the Auto Scaling Group initializes an instance and puts it into service.", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "When the Auto Scaling Group configures an instance and puts it into service.", "IsAnswer": false},
+            { "Id": 1058, "QuestionId": 1010, "Name": "When the Auto Scaling Group launches an instance and puts it into service.", "IsAnswer": true }],
+        "Explanation":"The auto scaling lifecycle refers to the life of an EC2 instance which is attached to an auto scaling group. The lifecycle starts when the Auto Scaling group launches an instance and puts it into service.",
+        "Ref":"https://docs.aws.amazon.com/autoscaling/latest/userguide/AutoScalingGroupLifecycle.html"
     }  ,
     {
         "Id": 28,
