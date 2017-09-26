@@ -339,16 +339,13 @@
     }  ,
     {
         "Id": 28,
-        "Name": "", 
+        "Name": "Which of the following techniques will let you perform multiple processes on the same piece of data at the same time using SQS? ", 
         "Tag":"ha, elasticity",
         "Options": [
-            { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false},
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-            { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-        "Explanation":"",
-        "Ref":""
+            { "Id": 1055, "QuestionId": 1010, "Name": "Flushout", "IsAnswer": false },
+            { "Id": 1056, "QuestionId": 1010, "Name": "Multi-part upload", "IsAnswer": false },
+            { "Id": 1057, "QuestionId": 1010, "Name": "Fanout", "IsAnswer": true},
+            { "Id": 1058, "QuestionId": 1010, "Name": "Hub and Spoke", "IsAnswer": false }]
     }  ,
     {
         "Id": 29,
