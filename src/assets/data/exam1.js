@@ -1149,19 +1149,7 @@
             "Explanation": "Latency Based Records allow request distribution when all is well with both regions, and the Failover component enables fallbacks between regions. By adding in the ELB and ASG, your system in the surviving region can expand to meet 100% of demand instead of the original fraction, whenever failover occurs.",
             "Ref": "http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover.html"
         }
-        ,
-        {
-            "Id": 126,
-            "Name": "You are designing an enterprise data storage system. Your data management software system requires mountable disks and a real filesystem, so you cannot use S3 for storage. You need persistence, so you will be using AWS EBS Volumes for your system. The system needs as low- cost storage as possible, and access is not frequent or high throughput, and is mostly sequential reads. Which is the most appropriate EBS Volume Type for this scenario?",
-            "Tag": "governance",
-            "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "gp1", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "io1", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "standard", "IsAnswer": true },
-                { "Id": 1058, "QuestionId": 1010, "Name": "gp2", "IsAnswer": false }],
-            "Explanation": "Standard volumes, or Magnetic volumes, are best for: Cold workloads where data is infrequently accessed, or scenarios where the lowest storage cost is important.",
-            "Ref": "http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html"
-        }
+        
         ,
         {
             "Id": 127,

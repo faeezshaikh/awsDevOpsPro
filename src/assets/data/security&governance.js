@@ -91,6 +91,18 @@
                 { "Id": 1058, "QuestionId": 1010, "Name": "Use AWS Config Timeline forensics.", "IsAnswer": false }],
             "Explanation": "You must use CloudTrail Log File Validation (default or custom implementation), as any other tracking method is subject to forgery in the event of a full account compromise by sophisticated enough hackers. Validated log files are invaluable in security and forensic investigations. For example, a validated log file enables you to assert positively that the log file itself has not changed, or that particular user credentials performed specific API activity. The CloudTrail log file integrity validation process also lets you know if a log file has been deleted or changed, or assert positively that no log files were delivered to your account during a given period of time.",
             "Ref": "http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-log-file-validation-intro.html"
+        },
+        {
+            "Id": 8,
+            "Name": "You are designing an enterprise data storage system. Your data management software system requires mountable disks and a real filesystem, so you cannot use S3 for storage. You need persistence, so you will be using AWS EBS Volumes for your system. The system needs as low- cost storage as possible, and access is not frequent or high throughput, and is mostly sequential reads. Which is the most appropriate EBS Volume Type for this scenario?",
+            "Tag": "governance",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "gp1", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "io1", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "standard", "IsAnswer": true },
+                { "Id": 1058, "QuestionId": 1010, "Name": "gp2", "IsAnswer": false }],
+            "Explanation": "Standard volumes, or Magnetic volumes, are best for: Cold workloads where data is infrequently accessed, or scenarios where the lowest storage cost is important.",
+            "Ref": "http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html"
         }
     ]
 }
