@@ -80,6 +80,19 @@
             "Explanation": "Auto Scaling lifecycle hooks enable you to perform custom actions by pausing instances as Auto Scaling launches or terminates them. For example, while your newly launched instance is paused, you could install or configure software on it.",
             "Ref": "http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html"
         }
+        ,
+        {
+            "Id": 7,
+            "Name": "You have just come from your Chief Information Security Officer's (CISO) office with the instructions to provide an audit report of all AWS network rules used by the organization's Amazon EC2 instances. You have discovered that a single Describe-Security-Groups API call will return all of an account's security groups and rules within a region. You create the following pseudo-code to create the required report: - Parse 'aws ec2 describe-security-groups' output - For each security group - Create report of ingress and egress rules. Which two additional pieces of logic should you include to meet the CISO's requirements? Choose 2 answers",
+            "Tag": "mm&l",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "Parse security groups in each region.", "IsAnswer": true },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Parse security groups in each Availability Zone and region.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Evaluate VPC network access control lists.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Evaluate AWS CloudTrail logs.", "IsAnswer": false },
+                { "Id": 1059, "QuestionId": 1010, "Name": "Evaluate Elastic Load Balancing access control lists.", "IsAnswer": false },
+                { "Id": 1060, "QuestionId": 1010, "Name": "Parse CloudFront access control lists.", "IsAnswer": false }]
+        }
      
      ]
 }
