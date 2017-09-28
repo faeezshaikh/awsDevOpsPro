@@ -966,18 +966,6 @@
                 { "Id": 1059, "QuestionId": 1010, "Name": "In the source bundle's .ebextensions folder, create a 'Packages' folder. Place the package in the folder.", "IsAnswer": false }],
             "Explanation": "See link for details on how to install a .NET app on Elastic Beanstalk",
             "Ref": "http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_NET.quickstart.html"
-        },
-        {
-            "Id": 81,
-            "Name": "For AWS Auto Scaling, what is the first transition state an instance enters after leaving steady state when scaling in due to health check failure or decreased load?",
-            "Tag": "ha",
-            "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "Terminating", "IsAnswer": true},
-                { "Id": 1056, "QuestionId": 1010, "Name": "Detaching", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "Terminating:Wait", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "EnteringStandby", "IsAnswer": false }],
-            "Explanation": "When Auto Scaling responds to a scale in event, it terminates one or more instances. These instances are detached from the Auto Scaling group and enter the Terminating state.",
-            "Ref": "http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/AutoScalingGroupLifecycle.html"
         }
         ,
         {

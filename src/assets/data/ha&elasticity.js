@@ -74,6 +74,18 @@
                 { "Id": 1058, "QuestionId": 1010, "Name": "Upload the HTML, CSS, images, and JavaScript for the front end, plus the Node.js code for the server-side application, to an Amazon S3 bucket. Create a CloudFront distribution with this bucket as its origin. Launch an Amazon Redshift cluster, and point your application to its JDBC endpoint.", "IsAnswer": false },
                 { "Id": 1059, "QuestionId": 1010, "Name": "Upload the HTML, CSS, images, and JavaScript for the front end to an Amazon S3 bucket. Use AWS Elastic Beanstalk to deploy the Node.js application. Launch an Amazon Redshift cluster, and point your application to its JDBC endpoint.", "IsAnswer": false }],
             "Explanation": "The principle to use is keep all the static content of your site in S3 buckets and serve them via Cloudfront. Deploy your application in Elastic Beanstalk and connect your application to the back-end database (Redshift) using JDBC."
+        },
+        {
+            "Id": 7,
+            "Name": "For AWS Auto Scaling, what is the first transition state an instance enters after leaving steady state when scaling in due to health check failure or decreased load?",
+            "Tag": "ha",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "Terminating", "IsAnswer": true},
+                { "Id": 1056, "QuestionId": 1010, "Name": "Detaching", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Terminating:Wait", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "EnteringStandby", "IsAnswer": false }],
+            "Explanation": "When Auto Scaling responds to a scale in event, it terminates one or more instances. These instances are detached from the Auto Scaling group and enter the Terminating state.",
+            "Ref": "http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/AutoScalingGroupLifecycle.html"
         }
 
     ]
