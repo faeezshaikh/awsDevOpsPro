@@ -92,6 +92,41 @@
                 { "Id": 1058, "QuestionId": 1010, "Name": "Evaluate AWS CloudTrail logs.", "IsAnswer": false },
                 { "Id": 1059, "QuestionId": 1010, "Name": "Evaluate Elastic Load Balancing access control lists.", "IsAnswer": false },
                 { "Id": 1060, "QuestionId": 1010, "Name": "Parse CloudFront access control lists.", "IsAnswer": false }]
+        }  ,
+        {
+            "Id": 8,
+            "Name": "Your application has an Auto Scaling group of m3.large instances running an application that receives messages from an Amazon SQS queue. After a while, the number of instances reaches the maximum set for the group and the number of messages on the queue continues to increase. You have discovered that a third- party library used by the application has a bug that causes a memory leak. What cost-effective steps can you take to continue message processing while the library developer fixes the bug?",
+            "Tag": "mm&l",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "Enable Elastic Load Balancing health checks for the Auto Scaling group. When Elastic Load Balancing has detected a failure, Auto Scaling will terminate the failing application's instance and launch a new one.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Use Amazon EC2 instance memory usage CloudWatch metrics to raise alerts when they reach a defined level and send a message to Auto Scaling to fail the instance health check.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Use application monitoring on the instance to restart the application when memory usage reaches a defined level.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Create a new Auto Scaling launch configuration to use the r3.large instance type. Update the Auto Scaling group with the new launch configuration.", "IsAnswer": true}],
+            "Explanation": "The only correct option is to vertically scale by using a larfer r3.large instance till the memory leak issue is fixed by the library developer"
+        }
+        ,
+        {
+            "Id": 9,
+            "Name": "You are in charge of a large-scale highly available multi-tier web application infrastructure. This architecture consists of Amazon Route53 with a load balancer and multiple Amazon EC2 instances. You have been tasked to come up with a process to provide Blue/Green style deployments. Which technique should you use to deliver this new requirement?",
+            "Tag": "mm&l",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "Using Elastic Beanstalk re-deploy your application and configure Elastic Beanstalk Deployment types, and then use Amazon Route53's alias resource record set to swap between Elastic Beanstalk deployment types.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Re-deploy your application behind a load balancer using an AWS CloudFormation template, launch a new AWS CloudFormation stack during each deployment, update your Amazon Route53 alias resource record set to point to the new load balancer, and finally, terminate your old AWS CloudFormation stack.", "IsAnswer": true },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Re-deploy your application behind a load balancer using Auto Scaling groups, create a new identical Auto Scaling group, and associate it to the load balancer. During deployment, create a new Amazon Route53 hosted zone, add this new load balancer to the zone in an alias resource record set, and then remove your old Auto Scaling group.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Re-deploy your application behind a load balancer using an OpsWorks stack, and use AWS OpsWorks stack versioning. During deployment, create a new version of your application, tell OpsWorks to launch the new version behind your load balancer, and when the new version launches, update your Amazon Route53 alias resource retort to point to the new load balancer.", "IsAnswer": false }],
+            "Explanation": "Best option is to use Cloudformation to spin up new stack, use Route53 alias record to perform a DNS switch from the old stack to the new stack and terminate the old stack."
+        }   ,
+        {
+            "Id": 10,
+            "Name": "Your social media marketing application has a component written in Ruby running on AWS Elastic Beanstalk. This application component posts messages to social media sites in support of various marketing campaigns. Your management now requires you to record replies to these social media messages to analyze the effectiveness of the marketing campaign in comparison to past and future efforts. You' ve already developed a new application component to interface with the social media site APIs in order to read the replies. Which process should you use to record the social media replies in a durable data store that can be accessed at any time for analysis of historical data?",
+            "Tag": "mm&l",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "Deploy the new application component in an Auto Scaling group of Amazon Elastic Compute Cloud (EC2) Instances, read the data from the social media sites, store it with Amazon Elastic Block Store, and use AWS Data Pipeline to publish it to Amazon Kinesis for analytics.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Deploy the new application component as an Elastic Beanstalk application, read the data from the social media sites, store it in Amazon DynamoDB, and use Apache Hive with Amazon Elastic MapReduce for analytics.", "IsAnswer": true },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Deploy the new application component in an Auto Scaling group of Amazon EC2 instances, read the data from the social media sites, store it in Amazon Glacier, and use AWS Data Pipeline to publish it to Amazon Redshift for analytics.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Deploy the new application component as an Amazon Elastic Beanstalk application, read the data from the social media site, store it with Amazon Elastic Block Store, and use Amazon Kinesis to stream the data to Amazon CloudWatch for analytics.", "IsAnswer": false }],
+            "Explanation": "Use DnyanamoDB for storing the replies in a durable store and use Hive and EMR for Data Analytics",
+            "Ref": "https://aws.amazon.com/emr/"
         }
      
      ]
