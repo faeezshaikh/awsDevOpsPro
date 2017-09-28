@@ -25,7 +25,7 @@
             "Options": [
                 { "Id": 1055, "QuestionId": 1010, "Name": "Create a new Auto Scaling launch configuration specifying the new instance type, associate it to the existing Auto Scaling group, and terminate the running instances.", "IsAnswer": true },
                 { "Id": 1056, "QuestionId": 1010, "Name": "Identify the new instance type in the user data and restart the running instances one at a time.", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "Use the AWS Command Line Interface (CLI) to modify the instance type of each running instance.", "IsAnswer": true },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Use the AWS Command Line Interface (CLI) to modify the instance type of each running instance.", "IsAnswer": false },
                 { "Id": 1058, "QuestionId": 1010, "Name": "Change the instance type in the AWS CloudFormation template that was used to create the Amazon EC2 instances, and then update the stack.", "IsAnswer": true },
                 { "Id": 1059, "QuestionId": 1010, "Name": "Take snapshots of the running instances, and launch new instances based on those snapshots.", "IsAnswer": false }]
         }
