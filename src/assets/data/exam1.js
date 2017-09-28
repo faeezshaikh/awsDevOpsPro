@@ -855,18 +855,6 @@
                 { "Id": 1058, "QuestionId": 1010, "Name": "The instances cannot be in a private subnet if the ELB is in a public one.", "IsAnswer": false }],
             "Explanation": "Since you are not using VPC endpoints, outbound requests for the code sitting in S3 are routed though the NAT for the VPC's private subnets. If this networking fails, runtime bootstrapping through code download will fail due to network unavailability and lack of access to the Internet, and thus Amazon S3.",
             "Ref": "http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_NAT_Instance.html"
-        },
-        {
-            "Id": 100,
-            "Name": "Which major database needs a BYO license?",
-            "Tag": "sec&governance",
-            "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "PostgreSQL", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "MariaDB", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "MySQL", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "Oracle", "IsAnswer": true}],
-            "Explanation": "Oracle is not open source, and requires a bring your own license model.",
-            "Ref": "http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Oracle.html"
         }
         ,
         {
@@ -1028,32 +1016,6 @@
                 { "Id": 1058, "QuestionId": 1010, "Name": "Scrape the billing page periodically and publish to SNS.", "IsAnswer": false }],
             "Explanation": "Even if you're careful to stay within the free tier, it's a good idea to create a billing alarm to notify you if you exceed the limits of the free tier. Billing alarms can help to protect you against unknowingly accruing charges if you inadvertently use a service outside of the free tier or if traffic exceeds your expectations.",
             "Ref": "http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/free-tier-alarms.html"
-        }
-        ,
-        {
-            "Id": 113,
-            "Name": "You need to grant a vendor access to your AWS account. They need to be able to read protected messages in a private S3 bucket at their leisure. They also use AWS. What is the best way to accomplish this?",
-            "Tag": "sec& gvo",
-            "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "Create an IAM User with API Access Keys. Grant the User permissions to access the bucket. Give the vendor the AWS Access Key ID and AWS Secret Access Key for the User.", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "Create an EC2 Instance Profile on your account. Grant the associated IAM role full access to the bucket. Start an EC2 instance with this Profile and give SSH access to the instance to the vendor.", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "Create a cross-account IAM Role with permission to access the bucket, and grant permission to use the Role to the vendor AWS account.", "IsAnswer": true },
-                { "Id": 1058, "QuestionId": 1010, "Name": "Generate a signed S3 PUT URL and a signed S3 PUT URL, both with wildcard values and 2 year durations. Pass the URLs to the vendor.", "IsAnswer": false }],
-            "Explanation": "When third parties require access to your organization's AWS resources, you can use roles to delegate access to them. For example, a third party might provide a service for managing your AWS resources. With IAM roles, you can grant these third parties access to your AWS resources without sharing your AWS security credentials. Instead, the third party can access your AWS resources by assuming a role that you create in your AWS account.",
-            "Ref": "http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_third-party.html"
-        }
-        ,
-        {
-            "Id": 114,
-            "Name": "Your serverless architecture using AWS API Gateway, AWS Lambda, and AWS DynamoDB experienced a large increase in traffic to a sustained 400 requests per second, and dramatically increased in failure rates. Your requests, during normal operation, last 500 milliseconds on average. Your DynamoDB table did not exceed 50% of provisioned throughput, and Table primary keys are designed correctly. What is the most likely issue?",
-            "Tag": "governance",
-            "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "Your API Gateway deployment is throttling your requests.", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "Your AWS API Gateway Deployment is bottlenecking on request (de)serialization.", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "You did not request a limit increase on concurrent Lambda function executions.", "IsAnswer": true },
-                { "Id": 1058, "QuestionId": 1010, "Name": "You used Consistent Read requests on DynamoDB and are experiencing semaphore lock.", "IsAnswer": false }],
-            "Explanation": "AWS API Gateway by default throttles at 500 requests per second steady-state, and 1000 requests per second at spike. Lambda, by default, throttles at 100 concurrent requests for safety. At 500 milliseconds (half of a second) per request, you can expect to support 200 requests per second at 100 concurrency. This is less than the 400 requests per second your system now requires. Make a limit increase request via the AWS Support Console. AWS Lambda: Concurrent requests safety throttle per account -> 100",
-            "Ref": "http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_lambda"
         }
         ,
         {
