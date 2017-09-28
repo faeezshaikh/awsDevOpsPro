@@ -1004,19 +1004,7 @@
             "Explanation": "One benefit of long polling with Amazon SQS is the reduction of the number of empty responses, when there are no messages available to return, in reply to a ReceiveMessage request sent to an Amazon SQS queue. Long polling allows the Amazon SQS service to wait until a message is available in the queue before sending a response.",
             "Ref": "http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-long-polling.html"
         }
-        ,
-        {
-            "Id": 112,
-            "Name": "You need to know when you spend $1000 or more on AWS. What's the easy way for you to see that notification?",
-            "Tag": "MM&L",
-            "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "AWS CloudWatch Events tied to API calls, when certain thresholds are exceeded, publish to SNS.", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "Scrape the billing page periodically and pump into Kinesis.", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "AWS CloudWatch Metrics + Billing Alarm + Lambda event subscription. When a threshold is exceeded, email the manager.", "IsAnswer": true},
-                { "Id": 1058, "QuestionId": 1010, "Name": "Scrape the billing page periodically and publish to SNS.", "IsAnswer": false }],
-            "Explanation": "Even if you're careful to stay within the free tier, it's a good idea to create a billing alarm to notify you if you exceed the limits of the free tier. Billing alarms can help to protect you against unknowingly accruing charges if you inadvertently use a service outside of the free tier or if traffic exceeds your expectations.",
-            "Ref": "http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/free-tier-alarms.html"
-        }
+       
         ,
         {
             "Id": 115,

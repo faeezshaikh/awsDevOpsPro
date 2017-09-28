@@ -103,6 +103,18 @@
                 { "Id": 1058, "QuestionId": 1010, "Name": "gp2", "IsAnswer": false }],
             "Explanation": "Standard volumes, or Magnetic volumes, are best for: Cold workloads where data is infrequently accessed, or scenarios where the lowest storage cost is important.",
             "Ref": "http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html"
+        } ,
+        {
+            "Id": 9,
+            "Name": "You need to know when you spend $1000 or more on AWS. What's the easy way for you to see that notification?",
+            "Tag": "MM&L",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "AWS CloudWatch Events tied to API calls, when certain thresholds are exceeded, publish to SNS.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Scrape the billing page periodically and pump into Kinesis.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "AWS CloudWatch Metrics + Billing Alarm + Lambda event subscription. When a threshold is exceeded, email the manager.", "IsAnswer": true},
+                { "Id": 1058, "QuestionId": 1010, "Name": "Scrape the billing page periodically and publish to SNS.", "IsAnswer": false }],
+            "Explanation": "Even if you're careful to stay within the free tier, it's a good idea to create a billing alarm to notify you if you exceed the limits of the free tier. Billing alarms can help to protect you against unknowingly accruing charges if you inadvertently use a service outside of the free tier or if traffic exceeds your expectations.",
+            "Ref": "http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/free-tier-alarms.html"
         }
     ]
 }
