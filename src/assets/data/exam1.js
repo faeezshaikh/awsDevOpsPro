@@ -1005,7 +1005,7 @@
                 { "Id": 1057, "QuestionId": 1010, "Name": "2 servers in each of AZ's a through e, inclusive.", "IsAnswer": true },
                 { "Id": 1058, "QuestionId": 1010, "Name": "4 servers in each of AZ's a through c, inclusive.", "IsAnswer": false }],
             "Explanation": "You need to design for N+1 redundancy on Availability Zones. ZONE_COUNT = (REQUIRED_INSTANCES / INSTANCE_COUNT_PER_ZONE) + 1. To minimize cost, spread the instances across as many possible zones as you can. By using a though e, you are allocating 5 zones. Using 2 instances, you have 10 total instances. If a single zone fails, you have 4 zones left, with 2 instances each, for a total of 8 instances. By spreading out as much as possible, you have increased cost by only 25% and significantly de-risked an availability zone failure.",
-            "Ref": "http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability- zones.html#concepts- regions-availability-zones"
+            "Ref": "http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions-availability-zones"
         }
         ,
         {
@@ -1018,7 +1018,7 @@
                 { "Id": 1057, "QuestionId": 1010, "Name": "Use a 'Parameter' for 'environment', and add a 'Condition' on the Route53 'Resource' in the template to create the record with a null string when 'environment' is 'production'.", "IsAnswer": false },
                 { "Id": 1058, "QuestionId": 1010, "Name": "Create two templates, one with the Route53 record and one without it. Use the one without it when deploying to production.", "IsAnswer": false }],
             "Explanation": "The best way to do this is with one template, and a Condition on the resource. Route53 does not allow null strings for records.",
-            "Ref": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/conditions-section- structure.html"
+            "Ref": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/conditions-section-structure.html"
         } ,
         {
             "Id": 87,
