@@ -909,17 +909,6 @@
             "Explanation": "Best option is to use Cloudformation to spin up new stack, use Route53 alias record to perform a DNS switch from the old stack to the new stack and terminate the old stack."
         }   ,
         {
-            "Id": 74,
-            "Name": "You have a web application that is currently running on a collection of micro instance types in a single AZ behind a single load balancer. You have an Auto Scaling group configured to scale from 2 to 64 instances. When reviewing your CloudWatch metrics, you see that sometimes your Auto Scaling group is running 64 micro instances. The web application is reading and writing to a DynamoDB-configured backend and configured with 800 Write Capacity Units and 800 Read Capacity Units. Your customers are complaining that they are experiencing long load times when viewing your website. You have investigated the DynamoDB CloudWatch metrics; you are under the provisioned Read and write Capacity Units and there is no throttling. How do you scale your service to improve the load times and ensure the principles of high availability?",
-            "Tag": "ha",
-            "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "Change your Auto Scaling group configuration to include multiple AZs.", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "Change your Auto Scaling group configuration to include multiple AZs, and increase the number of Read Capacity Units in your DynamoDB table by a factor of three, because you will need to be calling DynarnoDB from three AZs.", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "Add a second load balancer to your Auto Scaling group so that you can support more inbound connections per second.", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "Change your Auto Scaling group configuration to use larger instances and include multiple AZ's instead of one.", "IsAnswer": true}],
-            "Explanation": "For high-availability you have to use multiple AZs. To improve load times you have to scale. In this case, scale vertically by using larger instance types in multiple-AZs"
-        }  ,
-        {
             "Id": 75,
             "Name": "Your social media marketing application has a component written in Ruby running on AWS Elastic Beanstalk. This application component posts messages to social media sites in support of various marketing campaigns. Your management now requires you to record replies to these social media messages to analyze the effectiveness of the marketing campaign in comparison to past and future efforts. You' ve already developed a new application component to interface with the social media site APIs in order to read the replies. Which process should you use to record the social media replies in a durable data store that can be accessed at any time for analysis of historical data?",
             "Tag": "mm&l",
