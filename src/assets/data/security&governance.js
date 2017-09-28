@@ -79,6 +79,18 @@
                 { "Id": 1058, "QuestionId": 1010, "Name": "You used Consistent Read requests on DynamoDB and are experiencing semaphore lock.", "IsAnswer": false }],
             "Explanation": "AWS API Gateway by default throttles at 500 requests per second steady-state, and 1000 requests per second at spike. Lambda, by default, throttles at 100 concurrent requests for safety. At 500 milliseconds (half of a second) per request, you can expect to support 200 requests per second at 100 concurrency. This is less than the 400 requests per second your system now requires. Make a limit increase request via the AWS Support Console. AWS Lambda: Concurrent requests safety throttle per account -> 100",
             "Ref": "http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_lambda"
+        }   ,
+        {
+            "Id": 7,
+            "Name": "Your CTO thinks your AWS account was hacked. What is the only way to know for certain if there was unauthorized access and what they did, assuming your hackers are very sophisticated AWS engineers and doing everything they can to cover their tracks?",
+            "Tag": "sec&gov",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "Use CloudTrail Log File Integrity Validation.", "IsAnswer": true},
+                { "Id": 1056, "QuestionId": 1010, "Name": "Use AWS Config SNS Subscriptions and process events in real time.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Use CloudTrail backed up to AWS S3 and Glacier.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Use AWS Config Timeline forensics.", "IsAnswer": false }],
+            "Explanation": "You must use CloudTrail Log File Validation (default or custom implementation), as any other tracking method is subject to forgery in the event of a full account compromise by sophisticated enough hackers. Validated log files are invaluable in security and forensic investigations. For example, a validated log file enables you to assert positively that the log file itself has not changed, or that particular user credentials performed specific API activity. The CloudTrail log file integrity validation process also lets you know if a log file has been deleted or changed, or assert positively that no log files were delivered to your account during a given period of time.",
+            "Ref": "http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-log-file-validation-intro.html"
         }
     ]
 }
