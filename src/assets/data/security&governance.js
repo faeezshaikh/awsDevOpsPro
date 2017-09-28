@@ -115,6 +115,18 @@
                 { "Id": 1058, "QuestionId": 1010, "Name": "Scrape the billing page periodically and publish to SNS.", "IsAnswer": false }],
             "Explanation": "Even if you're careful to stay within the free tier, it's a good idea to create a billing alarm to notify you if you exceed the limits of the free tier. Billing alarms can help to protect you against unknowingly accruing charges if you inadvertently use a service outside of the free tier or if traffic exceeds your expectations.",
             "Ref": "http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/free-tier-alarms.html"
+        },
+        {
+            "Id": 10,
+            "Name": "You are building a deployment system on AWS. You will deploy new code by bootstrapping instances in a private subnet in a VPC at runtime using UserData scripts pointing to an S3 zip file object, where your code is stored. An ELB in a public subnet has network interfaces and connectivity to the instances. Requests from users of the system are routed to the ELB via a Route53 A Record Alias. You do not use any VPC endpoints. Which is a risk of using this approach?",
+            "Tag": "sec&gov",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "Route53 Alias records do not always update dynamically with ELB network changes after deployments.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "If the NAT routing for the private subnet fails, deployments fail.", "IsAnswer": true},
+                { "Id": 1057, "QuestionId": 1010, "Name": "Kernel changes to the base AMI may render the code inoperable.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "The instances cannot be in a private subnet if the ELB is in a public one.", "IsAnswer": false }],
+            "Explanation": "Since you are not using VPC endpoints, outbound requests for the code sitting in S3 are routed though the NAT for the VPC's private subnets. If this networking fails, runtime bootstrapping through code download will fail due to network unavailability and lack of access to the Internet, and thus Amazon S3.",
+            "Ref": "http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_NAT_Instance.html"
         }
     ]
 }
