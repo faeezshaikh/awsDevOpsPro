@@ -142,19 +142,7 @@
             "Explanation": "",
             "Ref": ""
         }
-        ,
-        {
-            "Id": 12,
-            "Name": "Your company develops a variety of web applications using many platforms and programming languages with different application dependencies. Each application must be developed and deployed quickly and be highly available to satisfy your business requirements. Which of the following methods should you use to deploy these applications rapidly?",
-            "Tag": "HA",
-            "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "Develop the applications in Docker containers, and then deploy them to Elastic Beanstalk environments with Auto Scaling and Elastic Load Balancing.", "IsAnswer": true },
-                { "Id": 1056, "QuestionId": 1010, "Name": "Use the AWS CloudFormation Docker import service to build and deploy the applications with high availability in multiple Availability Zones.", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "Develop each application's code in DynamoDB, and then use hooks to deploy it to Elastic Beanstalk environments with Auto Scaling and Elastic Load Balancing.", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "Store each application's code in a Git repository, develop custom package repository managers for each application's dependencies, and deploy to AWS OpsWorks in multiple Availability Zones.", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
-        }
+      
         ,
         {
             "Id": 13,
