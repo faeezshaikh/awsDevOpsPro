@@ -513,19 +513,6 @@
         }
         ,
         {
-            "Id": 48,
-            "Name": "Your DevOps team is responsible for a multi-tier, Windows-based web application consisting of web servers, Amazon RDS database instances, and a load balancer behind Amazon Route53. You've been asked by your manager to build a cost-effective rolling deployment solution for this web application. What method should you use?",
-            "Tag": "cd",
-            "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "Re-deploy your application on an AWS OpsWorks stack. Use the AWS OpsWorks done stack feature to allow updates between duplicate stacks.", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "Re-deploy your application on Elastic Beanstalk and take advantage of Elastic BeanStalk rolling updates.", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "Re-deploy your application using an AWS CloudFormation template, launch a new AWS CloudFormation stack during each deployment, and then tear down the old stack.", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "Re-deploy your application using an AWS CloudFormation template. Use AWS CloudFormation rolling deployment policies, create a new policy for your AWS CloudFormation stack, and initiate an update stack operation to deploy new code.", "IsAnswer": true }],
-            "Explanation": "Use Cloudformation with the 'AutoScalingRollingUpdate' policy. See link for more information.",
-            "Ref": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html"
-        }
-        ,
-        {
             "Id": 49,
             "Name": "You recently encountered a major bug in your Windows-based web application during a deployment cycle. During this failed deployment, it took the team four hours to roll back to a previously working state, which left customers with a poor user experience. During the post-mortem, your team discussed the need to provide a quicker way to roll back failed deployments. You currently run your web application on Amazon EC2 using Windows 2012R2 and use Elastic Load Balancing for your load balancing needs. Which technique should you use to solve this problem?",
             "Tag": "cd",
