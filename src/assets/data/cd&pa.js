@@ -74,6 +74,55 @@
                 { "Id": 1059, "QuestionId": 1010, "Name": "Re-deploy your web application using Elastic Beanstalk, and use the Elastic Beanstalk API to trigger a FailedDeployment API call to initiate a rollback to the previous version.", "IsAnswer": false }],
             "Explanation": "Elastic Beanstalk enables easy rollback for failed deployments. See link for more information.",
             "Ref": "http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.deploy-existing-version.html"
+        } ,
+        {
+            "Id": 7,
+            "Name": "Your organization has decided to implement a third-party configuration management tool that uses a master server from which nodes pull configuration. You have built a custom base Amazon Machine Image that already has the third-party configuration management agent installed. You want to use the same base AMI in Development, Test and Production environments, each of which has its own master server. How should you configure your Amazon EC2 instances to register with the correct master server on launch?",
+            "Tag": "cs&pa",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "Create a tag for all instances that specifies their environment. When launching instances, provide an Amazon EC2 UserData script that gets this tag by querying the MetaData Service and registers the agent with the master.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Use Amazon CloudFormation to describe your environment. Configure an input parameter for the master server hostname/address, and use this parameter within an Amazon EC2 UserData script that registers the agent with the master.", "IsAnswer": true },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Create a script on your third-party configuration management master server that queries the Amazon EC2 API for new instances and registers them with it.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Use Amazon Simple Workflow Service to automate the process of registering new instances with your master server. Use an Environment tag in Amazon EC2 to register instances with the correct master server.", "IsAnswer": false }],
+            "Explanation": "Refer the best practices link for implementing a third-party Configuration Management solution like Chef, Puppet, Ansible or Salt on AWS.",
+            "Ref": "https://aws.amazon.com/answers/configuration-management/aws-infrastructure-configuration-management/"
+        }  ,
+        {
+            "Id": 8,
+            "Name": "You have been asked to handle a large data migration from multiple Amazon RDS MySQL instances to a DynamoDB table. You have been given a short amount of time to complete the data migration. What will allow you to complete this complex data processing workflow?",
+            "Tag": "cd&pa",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "Create an Amazon Kinesis data stream, pipe in all of the Amazon RDS data, and direct the data toward a DynamoDB table.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Write a script in your language of choice, install the script on an Amazon EC2 instance, and then use Auto Scaling groups to ensure that the latency of the migration pipelines never exceeds four seconds in any 15- minute period.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Write a bash script to run on your Amazon RDS instance that will export data into DynamoDB.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Create a data pipeline to export Amazon RDS data and import the data into DynamoDB.", "IsAnswer": true }],
+            "Explanation": "Use AWS Data Piepline. AWS Data Pipeline is a web service that you can use to automate the movement and transformation of data. With AWS Data Pipeline, you can define data-driven workflows, so that tasks can be dependent on the successful completion of previous tasks. You define the parameters of your data transformations and AWS Data Pipeline enforces the logic that you've set up.",
+            "Ref": "http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/what-is-datapipeline.html"
+        },
+        {
+            "Id": 9,
+            "Name": "Your application requires a fault-tolerant, low-latency and repeatable method to load configurations files via Auto Scaling when Amazon Elastic Compute Cloud (EC2) instances launch. Which approach should you use to satisfy these requirements?",
+            "Tag": "cs&pa",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "Securely copy the content from a running Amazon EC2 instance.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Use an Amazon EC2 UserData script to copy the configurations from an Amazon Storage Services (S3) bucket.", "IsAnswer": true},
+                { "Id": 1057, "QuestionId": 1010, "Name": "Use a script via cfn-init to pull content hosted in an Amazon ElastiCache cluster.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Use a script via cfn-init to pull content hosted on your on-premises server.", "IsAnswer": false },
+                { "Id": 1059, "QuestionId": 1010, "Name": "Use an Amazon EC2 UserData script to pull content hosted on your on-premises server.", "IsAnswer": false }],
+            "Explanation": "Note that the cf-init is a Python helper script used to retrieve and interpret the resource metadata, installing packages, creating files and starting services. Here the requirement is to load config files via AS on EC2 launch.",
+            "Ref": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-helper-scripts-reference.html"
+        }  ,
+        {
+            "Id": 10,
+            "Name": "Your team is responsible for an AWS Elastic Beanstalk application. The business requires that you move to a continuous deployment model, thus releasing updates to the application multiple times per day with zero downtime. What should you do to enable this and still be able to roll back to the previous version almost immediately in an emergency?",
+            "Tag": "cd",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "Enable rolling updates in the Elastic Beanstalk environment and set an appropriate pause time for application startup.", "IsAnswer": true},
+                { "Id": 1056, "QuestionId": 1010, "Name": "Create a second Elastic Beanstalk environment that runs the new application version, and swap the environment CNAMEs", "IsAnswer": false},
+                { "Id": 1057, "QuestionId": 1010, "Name": "Configure the application to poll for a new application version in your code repository; download and install the new version to each running Elastic Beanstalk instance.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Create a second Elastic Beanstalk environment with the new application version, and configure the old environment to use the HTTP 301 response code to redirect clients to the new environment.", "IsAnswer": false }],
+            "Explanation": "You can enable and configure rolling updates in the Elastic Beanstalk Management Console. See link for details.",
+            "Ref": "http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.rollingupdates.html"
         }
 
     ]
