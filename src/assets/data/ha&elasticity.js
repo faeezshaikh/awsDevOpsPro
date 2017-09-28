@@ -62,7 +62,19 @@
                 { "Id": 1057, "QuestionId": 1010, "Name": "Add a second load balancer to your Auto Scaling group so that you can support more inbound connections per second.", "IsAnswer": false },
                 { "Id": 1058, "QuestionId": 1010, "Name": "Change your Auto Scaling group configuration to use larger instances and include multiple AZ's instead of one.", "IsAnswer": true}],
             "Explanation": "For high-availability you have to use multiple AZs. To improve load times you have to scale. In this case, scale vertically by using larger instance types in multiple-AZs"
-        } 
+        } ,
+        {
+            "Id": 6,
+            "Name": "You have written a server-side Node.Js application and a web application with an HTML/JavaScript front end that uses the Angular.js framework. The server-side application connects to an Amazon Redshift cluster, issues queries, and then returns the results to the front end for display. Your user base is very large and distributed, but it is important to keep the cost of running this application low. Which deployment strategy is both technically valid and the most cost-effective?",
+            "Tag": "ha",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "Deploy an AWS Elastic Beanstalk application with two environments: one for the Node.js application and another for the web front end. Launch an Amazon Redshift cluster, and point your application to its Java Database Connectivity (JDBC) endpoint.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Deploy an AWS OpsWorks stack with three layers: a static web server layer for your front end, a Node.js app server layer for your server-side application, and a Redshift DB layer for your Amazon Redshift cluster.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Upload the HTML, CSS, images, and JavaScript for the front end to an Amazon Simple Storage Service (S3) bucket. Create an Amazon CloudFront distribution with this bucket as its origin. Use AWS Elastic Beanstalk to deploy the Node.js application. Launch an Amazon Redshift cluster, and point your application to its JDBC endpoint.", "IsAnswer": true},
+                { "Id": 1058, "QuestionId": 1010, "Name": "Upload the HTML, CSS, images, and JavaScript for the front end, plus the Node.js code for the server-side application, to an Amazon S3 bucket. Create a CloudFront distribution with this bucket as its origin. Launch an Amazon Redshift cluster, and point your application to its JDBC endpoint.", "IsAnswer": false },
+                { "Id": 1059, "QuestionId": 1010, "Name": "Upload the HTML, CSS, images, and JavaScript for the front end to an Amazon S3 bucket. Use AWS Elastic Beanstalk to deploy the Node.js application. Launch an Amazon Redshift cluster, and point your application to its JDBC endpoint.", "IsAnswer": false }],
+            "Explanation": "The principle to use is keep all the static content of your site in S3 buckets and serve them via Cloudfront. Deploy your application in Elastic Beanstalk and connect your application to the back-end database (Redshift) using JDBC."
+        }
 
     ]
 }
