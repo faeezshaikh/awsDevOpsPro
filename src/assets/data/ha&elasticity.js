@@ -99,6 +99,18 @@
             "Explanation": "The Elastic Beanstalk option is incorrect because it requires a constantly-polling instance, which may break and costs money. The Lambda fleet option is incorrect because AWS Lambda does not support GPU usage. The OpsWorks stack option both requires a constantly-polling instance, and also requires complex timing and capacity planning logic. The CloudFormation option requires no polling, has no always-on instances, and allows arbitrarily fast processing by simply setting the instance count as high as needed.",
             "Ref": "http://docs.aws.amazon.com/lambda/latest/dg/current-supported-versions.html"
         }
-
+        ,
+        {
+            "Id": 9,
+            "Name": "You need to create a Route53 record automatically in CloudFormation when not running in production during all launches of a Template. How should you implement this?",
+            "Tag": "ha",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "Use a 'Parameter' for 'Environment', and add a 'Condition' on the Route53 'Resource' in the template to create the record only when 'environment' is not 'production'.", "IsAnswer": true},
+                { "Id": 1056, "QuestionId": 1010, "Name": "Create two templates, one with the Route53 record value and one with a null value for the record. Use the one without it when deploying to production.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Use a 'Parameter' for 'environment', and add a 'Condition' on the Route53 'Resource' in the template to create the record with a null string when 'environment' is 'production'.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Create two templates, one with the Route53 record and one without it. Use the one without it when deploying to production.", "IsAnswer": false }],
+            "Explanation": "The best way to do this is with one template, and a Condition on the resource. Route53 does not allow null strings for records.",
+            "Ref": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/conditions-section-structure.html"
+        }
     ]
 }
