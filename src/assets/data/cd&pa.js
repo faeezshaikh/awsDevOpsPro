@@ -1,8 +1,8 @@
 {
     "quiz": {
         "name": "Continuous Delivery and Process Automation ",
-        "logo" : "assets/img/S3.png",
-        "time":"20 minutes"
+            "logo" : "assets/img/S3.png",
+                "time":"20 minutes"
     },
     "questions": [
         {
@@ -37,7 +37,19 @@
                 { "Id": 1057, "QuestionId": 1010, "Name": "Create a new load balancer with new Amazon EC2 instances, carry out the deployment, and then switch DNS over to the new load balancer using Amazon Route 53 after testing.", "IsAnswer": true },
                 { "Id": 1058, "QuestionId": 1010, "Name": "Launch more Amazon EC2 instances to ensure high availability, de-register each Amazon EC2 instance from the load balancer, upgrade it, and test it, and then register it again with the load balancer.", "IsAnswer": false }],
             "Explanation": "For Blue/Green deployment, you have to have another enovironment that mirrors the current one. Do DNS (Route 53) switch to divert traffic from one environment to the other. "
+        },
+        {
+            "Id": 4,
+            "Name": "You are using AWS Elastic Beanstalk to deploy your application and must make data stored on an Amazon Elastic Block Store (EBS) volume snapshot available to the Amazon Elastic Compute Cloud (EC2) instances. How can you modify your Elastic Beanstalk environment so that the data is added to the Amazon EC2 instances every time you deploy your application?",
+            "Tag": "cd",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "Add commands to a configuration file in the .ebextensions folder of your deployable archive that mount an additional Amazon EBS volume on launch. Also add a 'BlockDeviceMappings' option, and specify the snapshot to use for the block device in the Auto Scaling launch configuration.", "IsAnswer": true },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Add commands to a configuration file in the .ebextensions folder of your deployable archive that uses the create-volume Amazon EC2 API or CLI to create a new ephemeral volume based on the specified snapshot and then mounts the volume on launch.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Add commands to the Amazon EC2 user data that will be executed by eb-init, which uses the create- volume Amazon EC2 API or CLI to create a new Amazon EBS volume based on the specified snapshot, and then mounts the volume on launch.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Add commands to the Chef recipe associated with your environment, use the create-volume Amazon EC2 API or CLI to create a new Amazon EBS volume based on the specified snapshot, and then mount the volume on launch.", "IsAnswer": false }],
+            "Explanation": "Use the .ebextensions folder for advanced configuration. Creating an ephemeral volume does not satisfy the durability requirement of this use case. See link for additional information.",
+            "Ref": "http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/ebextensions.html"
         }
-   
-     ]
+
+    ]
 }
