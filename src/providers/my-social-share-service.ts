@@ -16,11 +16,11 @@ export class MySocialShareService {
   // http://masteringionic.com/blog/2016-12-27-implementing-social-media-sharing-in-ionic-applications/?s=2016-12-27-implementing-social-media-sharing-in-ionic-2-applications/
 
    public sendTo   : any;
-   public subject  : string = 'AWS Certified Sol. Arch - Professional';
-   public shareMsg  : string = "I thought you'd find this app useful for preparing for the AWS Certified Solution Architect - Professional Exam. Check out this app in app store. ";
+   public subject  : string = 'AWS Certified DevOps - Professional';
+   public shareMsg  : string = "I thought you'd find this app useful for preparing for the AWS Certified DevOps - Professional Exam. Check out this app in app store. ";
    public image     : string   = "assets/img/EC2.png";
    public fbUrl      : string   ="https://www.facebook.com/awsarchitect";
-   public twitterMsg: string = "Check out the AWS Sol Arch Professional Exam App"
+   public twitterMsg: string = "Check out the AWS DevOps Professional Exam App"
 
 
  presentToast(msg:string) {
