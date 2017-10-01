@@ -1,6 +1,4 @@
-/**
- * Created by Vladimir Budilov on 8/13/16.
- */
+
 
 export let _REGION = "us-west-2";
 
