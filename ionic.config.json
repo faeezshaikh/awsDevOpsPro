@@ -2,5 +2,7 @@
   "name": "awsDevOpsPro",
   "app_id": "94e33ee8",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }

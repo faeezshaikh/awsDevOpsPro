@@ -133,9 +133,9 @@ export class TopicDetailPage {
       // timerId = (type == 'minute' ? this.st.subscribe('mt', e => this.mtTimercallback()) : this.st.subscribe('sec', e => this.secondsTimercallback()));
 
       if(type == 'minute') {
-        this.mtTimerId = this.st.subscribe('mt', e => this.mtTimercallback());
+        this.mtTimerId = this.st.subscribe('mt', () => this.mtTimercallback());
       } else {
-        this.secondsTimerId = this.st.subscribe('sec', e => this.secondsTimercallback());
+        this.secondsTimerId = this.st.subscribe('sec', () => this.secondsTimercallback());
       }
       // console.log('Timer subsribed: ', this.mtTimerId);
       // console.log('Timer subsribed: ', this.secondsTimerId);
