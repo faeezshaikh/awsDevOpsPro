@@ -32,6 +32,13 @@ Troubleshooting:
 
 =======
 
+
+Plugins
+
+Install all cordova plugins ..Reference awsSolArchPro app.
+
+======
+
 TypeError: Cannot read property 'substr' of undefined
     at Function.<anonymous> (/Users/faeezshaikh/git/awsDevOpsPro/node_modules/source-map/lib/source-node.js:115:26)
     at Array.forEach (native)
