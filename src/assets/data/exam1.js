@@ -585,7 +585,7 @@
             "Options": [
                 { "Id": 1055, "QuestionId": 1010, "Name": "Custom resources using SNS have a default timeout of 3 minutes.", "IsAnswer": false },
                 { "Id": 1056, "QuestionId": 1010, "Name": "Custom resources using SNS do not need a 'ServiceToken' property.", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "Custom resources using Lambda and 'ZipFile' allow inline nodejs resource composition.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Custom resources using Lambda and 'ZipFile' allow inline nodejs resource composition.", "IsAnswer": true },
                 { "Id": 1058, "QuestionId": 1010, "Name": "Custom resources using Lambda do not need a 'ServiceToken' property", "IsAnswer": false }],
             "Explanation": "Code is a property of the AWS::Lambda::Function resource that enables you to specify the source code of an AWS Lambda (Lambda) function. You can point to a file in an Amazon Simple Storage Service (Amazon S3) bucket or specify your source code as inline text (for nodejs runtime environments only).",
             "Ref": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html"
@@ -651,7 +651,7 @@
             "Options": [
                 { "Id": 1055, "QuestionId": 1010, "Name": "cfn-signal", "IsAnswer": false },
                 { "Id": 1056, "QuestionId": 1010, "Name": "cfn-hup", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "cfn-request", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "cfn-request", "IsAnswer": true },
                 { "Id": 1058, "QuestionId": 1010, "Name": "cfn-get-metadata", "IsAnswer": false }],
             "Explanation": "This is the complete list of CloudFormation Helper Scripts: cfn-init, cfn-signal, cfn-get-metadata, cfn-hup",
             "Ref": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-helper-scripts- reference.html"
@@ -696,15 +696,15 @@
         } ,
         {
             "Id": 134,
-            "Name": "",
+            "Name": "What is required to achieve gigabit network throughput on EC2? You already selected cluster-compute, 10GB instances with enhanced networking, and your workload is already network-bound, but you are not seeing 10 gigabit speeds.",
             "Tag": "",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1056, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "", "IsAnswer": false },
-                { "Id": 1058, "QuestionId": 1010, "Name": "", "IsAnswer": false }],
-            "Explanation": "",
-            "Ref": ""
+                { "Id": 1055, "QuestionId": 1010, "Name": "Enable biplex networking on your servers, so packets are non-blocking in both directions and there's no switching overhead.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Ensure the instances are in different VPCs so you don't saturate the Internet Gateway on any one VPC.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Select PIOPS for your drives and mount several, so you can provision sufficient disk throughput.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Use a placement group for your instances so the instances are physically near each other in the same Availability Zone.", "IsAnswer": true }],
+            "Explanation": "You are not guaranteed 10gigabit performance, except within a placement group. A placement group is a logical grouping of instances within a single Availability Zone. Using placement groups enables applications to participate in a low-latency, 10 Gbps network. Placement groups are recommended for applications that benefit from low network latency, high network throughput, or both.",
+            "Ref": "http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html"
         } ,
         {
             "Id": 135,
@@ -829,7 +829,7 @@
             "Name": "Which of the following are the three Amazon Kinesis services?", 
             "Tag":"ha, elasticity",
             "Options": [
-                { "Id": 1055, "QuestionId": 1010, "Name": "Kinesis Streams, Kinesis Analytics and Kinesis Firehose", "IsAnswer": false },
+                { "Id": 1055, "QuestionId": 1010, "Name": "Kinesis Streams, Kinesis Analytics and Kinesis Firehose", "IsAnswer": true },
                 { "Id": 1056, "QuestionId": 1010, "Name": "Kinesis Waterfalls, Kinesis Logs and Kinesis Firehose", "IsAnswer": false },
                 { "Id": 1057, "QuestionId": 1010, "Name": "Kinesis Waterfalls, Kinesis Logs and Kinesis Fireman", "IsAnswer": false},
                 { "Id": 1058, "QuestionId": 1010, "Name": "Kinesis Streams, Kinesis Analytics and Kinesis Fireman", "IsAnswer": false }],
