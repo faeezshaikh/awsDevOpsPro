@@ -708,7 +708,7 @@
         { "Id": 1055, "QuestionId": 1010, "Name": "Use OPSWorks and the custom layer type to deploy an elastic beanstalk environment using the specific set of dependencies required. Use the layer options to deploy the custom language runtimes", "IsAnswer": false },
         { "Id": 1056, "QuestionId": 1010, "Name": "Manually build an elastic beanstalk environment starting with the base EC2 instance and using CloudFormation add the EB build components to support the application", "IsAnswer": false },
         { "Id": 1057, "QuestionId": 1010, "Name": "Use CloudFormation to deploy a custom elastic beanstalk environment, using bootstrapping to add the specific dependencies and runtime required to support your application", "IsAnswer": false},
-        { "Id": 1058, "QuestionId": 1010, "Name": "Produce a docker container containing your application, all requirements and specific dependency versions. Upload to a private docker registry and use elastic beanstalk to deploy the docker container", "IsAnswer": false }],
+        { "Id": 1058, "QuestionId": 1010, "Name": "Produce a docker container containing your application, all requirements and specific dependency versions. Upload to a private docker registry and use elastic beanstalk to deploy the docker container", "IsAnswer": true}],
     "Explanation":"If you dockerize your application you are bundling all dependencies together and making it portable. This way your app is guaranteed to run on any platform as long as it supports Docker"
 } 
 ,
