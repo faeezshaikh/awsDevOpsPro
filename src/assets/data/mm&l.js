@@ -88,7 +88,7 @@
             "Options": [
                 { "Id": 1055, "QuestionId": 1010, "Name": "Parse security groups in each region.", "IsAnswer": true },
                 { "Id": 1056, "QuestionId": 1010, "Name": "Parse security groups in each Availability Zone and region.", "IsAnswer": false },
-                { "Id": 1057, "QuestionId": 1010, "Name": "Evaluate VPC network access control lists.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Evaluate VPC network access control lists.", "IsAnswer": true },
                 { "Id": 1058, "QuestionId": 1010, "Name": "Evaluate AWS CloudTrail logs.", "IsAnswer": false },
                 { "Id": 1059, "QuestionId": 1010, "Name": "Evaluate Elastic Load Balancing access control lists.", "IsAnswer": false },
                 { "Id": 1060, "QuestionId": 1010, "Name": "Parse CloudFront access control lists.", "IsAnswer": false }]
