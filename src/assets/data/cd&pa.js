@@ -123,6 +123,18 @@
                 { "Id": 1058, "QuestionId": 1010, "Name": "Create a second Elastic Beanstalk environment with the new application version, and configure the old environment to use the HTTP 301 response code to redirect clients to the new environment.", "IsAnswer": false }],
             "Explanation": "You can enable and configure rolling updates in the Elastic Beanstalk Management Console. See link for details.",
             "Ref": "http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.rollingupdates.html"
+        } ,
+        {
+            "Id": 11,
+            "Name": "If I want CloudFormation stack status updates to show up in a continuous delivery system in as close to real time as possible, how should I achieve this?",
+            "Tag": "cd",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "Use a long-poll on the Resources object in your CloudFormation stack and display those state changes in the UI for the system.", "IsAnswer": false},
+                { "Id": 1056, "QuestionId": 1010, "Name": "Use a long-poll on the 'ListStacks' API call for your CloudFormation stack and display those state changes in the UI for the system.", "IsAnswer": false},
+                { "Id": 1057, "QuestionId": 1010, "Name": "Subscribe your continuous delivery system to an SNS topic that you also tell your CloudFormation stack to publish events into.", "IsAnswer": true },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Subscribe your continuous delivery system to an SQS queue that you also tell your CloudFormation stack to publish events into.", "IsAnswer": false }],
+            "Explanation": "Use NotificationARNs.member.N when making a CreateStack call to push stack events into SNS in nearly real-time.",
+            "Ref": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-monitor-stack.html"
         }
 
     ]
