@@ -835,6 +835,18 @@
                 { "Id": 1058, "QuestionId": 1010, "Name": "Kinesis Streams, Kinesis Analytics and Kinesis Fireman", "IsAnswer": false }],
             "Explanation":"Kinesis contains 3 separate services, Kinesis Streams, Kinesis Analytics and Kinesis Firehose.",
             "Ref":"https://aws.amazon.com/kinesis/"
+        }    ,
+        {
+            "Id": 27,
+            "Name": "What does it mean if you have zero IOPS and a non-empty I/O queue for all EBS volumes attached to a running EC2 instance?", 
+            "Tag":"ha, elasticity",
+            "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "The I/O queue is buffer flushing.", "IsAnswer": false },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Your EBS disk head(s) is/are seeking magnetic stripes.", "IsAnswer": false },
+                { "Id": 1057, "QuestionId": 1010, "Name": "The EBS volume is unavailable.", "IsAnswer": true},
+                { "Id": 1058, "QuestionId": 1010, "Name": "You need to re-mount the EBS volume in the OS.", "IsAnswer": false }],
+            "Explanation":"This is the definition of Unavailable from the EC2 and EBS SLA. For Amazon EBS, 'Unavailable' and 'Unavailability' mean  when all of your attached volumes perform zero read write IO, with pending IO in the queue.",
+            "Ref":"https://aws.amazon.com/ec2/sla/"
         }  
     ]
 }
